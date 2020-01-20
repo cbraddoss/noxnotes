@@ -17,14 +17,15 @@
         <script async src="js/app.js"></script>
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133659095-1"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133659095-2"></script>
         <script>
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'UA-133659095-1');
+          gtag('config', 'UA-133659095-2');
         </script>
+
         <script>var whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
         <script src="https://wow.zamimg.com/widgets/power.js"></script>
     </head>
