@@ -72,28 +72,28 @@
                     <a class="nav-link @if($_SERVER['REQUEST_URI'] == '/hivemind') {{ 'active' }} @endif" href="/hivemind"><img src="https://s3.amazonaws.com/noxguild/notes/hivemind-icon.jpg" alt="Hivemind"></a><span>Hivemind</span>
                 </li>
                 <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/shad-har') {{ 'active' }} @endif">
-                    <a class="nav-link @if($_SERVER['REQUEST_URI'] == '/shadhar') {{ 'active' }} @endif" href="/shad-har"><img src="https://s3.amazonaws.com/noxguild/notes/shadhar-icon.jpg" alt="Shad'har"></a><span>Shad'har</span>
+                    <a class="nav-link @if($_SERVER['REQUEST_URI'] == '/shad-har') {{ 'active' }} @endif" href="/shad-har"><img src="https://s3.amazonaws.com/noxguild/notes/shadhar-icon.jpg" alt="Shad'har"></a><span>Shad'har</span>
                 </li>
             </ul>
 
             <ul class="nav justify-content-center text-center">
                 <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/drest-agath') {{ 'active' }} @endif">
-                    <a class="nav-link @if($_SERVER['REQUEST_URI'] == '/drestagath') {{ 'active' }} @endif" href="/drest-agath"><img src="https://s3.amazonaws.com/noxguild/notes/drestagath-icon.jpg" alt="Drest'agath"></a><span>Drest'agath</span>
-                </li>
-                <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/il-gynoth') {{ 'active' }} @endif">
-                    <a class="nav-link @if($_SERVER['REQUEST_URI'] == '/ilgynoth') {{ 'active' }} @endif" href="/il-gynoth"><img src="https://s3.amazonaws.com/noxguild/notes/ilgynoth-icon.jpg" alt="Il'gynoth"></a><span>Il'gynoth</span>
+                    <a class="nav-link @if($_SERVER['REQUEST_URI'] == '/drest-agath') {{ 'active' }} @endif" href="/drest-agath"><img src="https://s3.amazonaws.com/noxguild/notes/drestagath-icon.jpg" alt="Drest'agath"></a><span>Drest'agath</span>
                 </li>
                 <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/vexiona') {{ 'active' }} @endif">
                     <a class="nav-link @if($_SERVER['REQUEST_URI'] == '/vexiona') {{ 'active' }} @endif" href="/vexiona"><img src="https://s3.amazonaws.com/noxguild/notes/vexiona-icon.jpg" alt="Vexiona"></a><span>Vexiona</span>
                 </li>
+                <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/il-gynoth') {{ 'active' }} @endif">
+                    <a class="nav-link @if($_SERVER['REQUEST_URI'] == '/il-gynoth') {{ 'active' }} @endif" href="/il-gynoth"><img src="https://s3.amazonaws.com/noxguild/notes/ilgynoth-icon.jpg" alt="Il'gynoth"></a><span>Il'gynoth</span>
+                </li>
                 <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/ra-den') {{ 'active' }} @endif">
-                    <a class="nav-link @if($_SERVER['REQUEST_URI'] == '/raden') {{ 'active' }} @endif" href="/ra-den"><img src="https://s3.amazonaws.com/noxguild/notes/raden-icon.jpg" alt="Ra'den"></a><span>Ra'den</span>
+                    <a class="nav-link @if($_SERVER['REQUEST_URI'] == '/ra-den') {{ 'active' }} @endif" href="/ra-den"><img src="https://s3.amazonaws.com/noxguild/notes/raden-icon.jpg" alt="Ra'den"></a><span>Ra'den</span>
                 </li>
                 <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/carapace') {{ 'active' }} @endif">
                     <a class="nav-link @if($_SERVER['REQUEST_URI'] == '/carapace') {{ 'active' }} @endif" href="/carapace"><img src="https://s3.amazonaws.com/noxguild/notes/carapace-nzoth-icon.jpg" alt="Carapace of N'zoth"></a><span>Carapace</span>
                 </li>
                 <li class="nav-item @if($_SERVER['REQUEST_URI'] == '/n-zoth') {{ 'active' }} @endif">
-                    <a class="nav-link @if($_SERVER['REQUEST_URI'] == '/nzoth') {{ 'active' }} @endif" href="/n-zoth"><img src="https://s3.amazonaws.com/noxguild/notes/nzoth-icon.jpg" alt="N'zoth"></a><span>N'zoth</span>
+                    <a class="nav-link @if($_SERVER['REQUEST_URI'] == '/n-zoth') {{ 'active' }} @endif" href="/n-zoth"><img src="https://s3.amazonaws.com/noxguild/notes/nzoth-icon.jpg" alt="N'zoth"></a><span>N'zoth</span>
                 </li>
             </ul>
         </div>

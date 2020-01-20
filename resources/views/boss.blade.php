@@ -20,10 +20,10 @@
 
         <ul class="nav nav-tabs boss-nav-tabs" id="myTab" role="tablist">
             <li class="nav-item">
-                <a class="nav-link active" id="tank-tab" data-toggle="tab" href="#tank" role="tab" aria-controls="tank" aria-selected="true">Tank</a>
+                <a class="nav-link active" id="dps-tab" data-toggle="tab" href="#dps" role="tab" aria-controls="dps" aria-selected="false">DPS</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" id="dps-tab" data-toggle="tab" href="#dps" role="tab" aria-controls="dps" aria-selected="false">DPS</a>
+                <a class="nav-link" id="tank-tab" data-toggle="tab" href="#tank" role="tab" aria-controls="tank" aria-selected="true">Tank</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" id="healer-tab" data-toggle="tab" href="#healer" role="tab" aria-controls="healer" aria-selected="false">Healer</a>
@@ -32,29 +32,7 @@
 
         <div class="tab-content" id="myTabContent">
 
-            <div class="tab-pane fade show active" id="tank" role="tabpanel" aria-labelledby="tank-tab">
-                <div class="card bg-secondary text-light">
-                    <div class="card-body spec-cards">
-                        <h5 class="card-title display-7">Tank Quick Notes:</h5>
-                        <h6 class="card-subtitle mb-2 card-duty text-dark">{!! $assignments['tank'] !!}</h6>
-                        <ul class="list-group list-group-flush bg-dark text-light">
-                            <li class="list-group-item card-phase text-dark">{!! $phaseOne['tank'][0] !!}</li>
-                            @foreach($phaseOne['tank']['notes'] as $tankNotesOne)
-                            <li class="list-group-item bg-dark text-light">{!! $tankNotesOne !!}</li>
-                            @endforeach
-                        </ul>
-                        @if(!empty($phaseTwo['tank']['notes']))
-                        <ul class="list-group list-group-flush bg-dark text-light">
-                            <li class="list-group-item card-phase text-dark">{!! $phaseTwo['tank'][0] !!}</li>
-                            @foreach($phaseTwo['tank']['notes'] as $tankNotesTwo)
-                            <li class="list-group-item bg-dark text-light">{!! $tankNotesTwo !!}</li>
-                            @endforeach
-                        </ul>
-                        @endif
-                    </div>
-                </div>
-            </div>
-            <div class="tab-pane fade" id="dps" role="tabpanel" aria-labelledby="dps-tab">
+            <div class="tab-pane fade show active" id="dps" role="tabpanel" aria-labelledby="dps-tab">
                 <div class="card bg-secondary text-light">
                     <div class="card-body">
                         <h5 class="card-title display-7">DPS Quick Notes:</h5>
@@ -70,6 +48,28 @@
                             <li class="list-group-item card-phase text-dark">{!! $phaseTwo['dps'][0] !!}</li>
                             @foreach($phaseTwo['dps']['notes'] as $dpsNotesTwo)
                             <li class="list-group-item bg-dark text-light">{!! $dpsNotesTwo !!}</li>
+                            @endforeach
+                        </ul>
+                        @endif
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="tank" role="tabpanel" aria-labelledby="tank-tab">
+                <div class="card bg-secondary text-light">
+                    <div class="card-body spec-cards">
+                        <h5 class="card-title display-7">Tank Quick Notes:</h5>
+                        <h6 class="card-subtitle mb-2 card-duty text-dark">{!! $assignments['tank'] !!}</h6>
+                        <ul class="list-group list-group-flush bg-dark text-light">
+                            <li class="list-group-item card-phase text-dark">{!! $phaseOne['tank'][0] !!}</li>
+                            @foreach($phaseOne['tank']['notes'] as $tankNotesOne)
+                            <li class="list-group-item bg-dark text-light">{!! $tankNotesOne !!}</li>
+                            @endforeach
+                        </ul>
+                        @if(!empty($phaseTwo['tank']['notes']))
+                        <ul class="list-group list-group-flush bg-dark text-light">
+                            <li class="list-group-item card-phase text-dark">{!! $phaseTwo['tank'][0] !!}</li>
+                            @foreach($phaseTwo['tank']['notes'] as $tankNotesTwo)
+                            <li class="list-group-item bg-dark text-light">{!! $tankNotesTwo !!}</li>
                             @endforeach
                         </ul>
                         @endif
@@ -104,7 +104,6 @@
 
         <h2 class="display-7 text-light">Mythic Changes:</h2>
         <ul class="list-group list-group-flush bg-dark text-light">
-            @if(empty($mythic)) {!! '<li class="list-group-item bg-dark text-light">Mythic notes need to be added here!</li>' !!} @endif
             @foreach($mythic as $mythicNotes)
             <li class="list-group-item bg-dark text-light">{!! $mythicNotes !!}</li>
             @endforeach

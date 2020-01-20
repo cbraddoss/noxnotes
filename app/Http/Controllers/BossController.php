@@ -240,7 +240,7 @@ class BossController extends Controller
             if($boss == 'inquisitor') {
                 $assignments = [
                     'tank' => 'Mark tanks',
-                    'dps' => 'Assign soccer player rotations, groups of 3 for <a class="text-mechanic" href="https://www.wowhead.com/spell=312336/void-ritual"></a> (Heroic only)',
+                    'dps' => 'Assign soccer player rotations, groups of 3 (Heroic only. mythic everyone helps) for <a class="text-mechanic" href="https://www.wowhead.com/spell=312336/void-ritual"></a>',
                     'healer' => '---'
                 ];
                 $phaseOne = [
@@ -258,7 +258,7 @@ class BossController extends Controller
                         'PHASE 1',
                         'notes' => [
                             'Move out of <a class="text-mechanic" href="https://www.wowhead.com/spell=311383/torment"></a> zones',
-                            'Do soccer with the <a class="text-mechanic" href="https://www.wowhead.com/spell=314202/void-orb"></a> (Note: the orb will move directions when it hits the EDGE of your character, not the middle of your character. Also note: the orb moves in the direction you are facing)',
+                            'Do soccer with the <a class="text-mechanic" href="https://www.wowhead.com/spell=314202/void-orb"></a>. The orb will hit the edge of your character and move it in the direction you are facing (Note: the orb does not change direction from the middle of your character, but only the edge, learn this!)',
                             'Avoid letting <a class="text-mechanic" href="https://www.wowhead.com/spell=314202/void-orb"></a> touch any walls (middle, outside, obelisks)',
                             'Do not jump off the edge, you will die!',
                             'Move away from shadow soul <a class="text-mechanic" href="https://www.wowhead.com/spell=306228/soul-flay"></a> to reduce damage when it explodes'
@@ -318,10 +318,12 @@ class BossController extends Controller
                     'dps' => [
                         'PHASE 1 - STACK PHASE',
                         'notes' => [
+                            'Spread 4+ yards apart for <a class="text-mechanic" href="https://www.wowhead.com/spell=307232/echoing-void"></a>',
+                            'Keep <a class="text-mechanic" href="https://www.wowhead.com/spell=313652/mind-numbing-nova"></a> interrupted using assigned interrupt rotation',
                             'Burst down <a class="text-mechanic" href="https://www.wowhead.com/npc=157256/aqir-darter"></a> immediately, interrupt via stuns, grips, CCs',
                             'Be ready to burst down <a class="text-mechanic" href="https://www.wowhead.com/npc=160599/aqir-ravager"></a> before it stacks tank dot too high',
                             'Adds gain stacking damage and movespeed over time',
-                            'Spread 4+ yards apart for <a class="text-mechanic" href="https://www.wowhead.com/spell=307232/echoing-void"></a>'
+                            'Bosses need to die within 10 seconds of each other'
                         ],
                     ],
                     'healer' => [
@@ -340,10 +342,11 @@ class BossController extends Controller
                     'dps' => [
                         'PHASE 2 - SPREAD PHASE',
                         'notes' => [
-                            'Bosses need to die within 10 seconds of each other',
+                            'Keep <a class="text-mechanic" href="https://www.wowhead.com/spell=313652/mind-numbing-nova"></a> interrupted using assigned interrupt rotation',
                             'Be ready to swap to <a class="text-mechanic" href="https://ptr.wowhead.com/npc=157661/aqir-drone"></a> empowered by <a class="text-mechanic" href="https://www.wowhead.com/spell=307582/volatile-eruption"></a>, have to kill in 20 seconds.',
                             'All adds start healing at 20%, need to focus kill instead of passive cleave',
-                            'Stand on edges of the room to dodge rolly bois'
+                            'Stand on edges of the room to dodge rolly bois',
+                            'Bosses need to die within 10 seconds of each other'
                         ],
                     ],
                     'healer' => [
@@ -365,49 +368,66 @@ class BossController extends Controller
             // shadhar
             if($boss == 'shad-har') {
                 $assignments = [
-                    'tank' => 'Special Instructions',
-                    'dps' => 'DPS Instructions',
-                    'healer' => 'Healing Instructions'
+                    'tank' => '---',
+                    'dps' => '---',
+                    'healer' => 'Assign spot healer?'
                 ];
                 $phaseOne = [
                     'tank' => [
                         'PHASE 1',
                         'notes' => [
-                            'Grong style taunt combo, swap at [Crush] and [Dissolve]',
-                            'Tank with [Crush] debuff cannot take dissolve'
+                            'Avoid standing in water on edge of room!',
+                            'Grong style taunt combo, swap at <a class="text-mechanic" href="https://www.wowhead.com/spell=307471/crush"></a> and <a class="text-mechanic" href="https://www.wowhead.com/spell=307472/dissolve"></a>',
+                            'Tank with <a class="text-mechanic" href="https://www.wowhead.com/spell=307471/crush"></a> debuff cannot take <a class="text-mechanic" href="https://www.wowhead.com/spell=307472/dissolve"></a>',
+                            'Tank with <a class="text-mechanic" href="https://www.wowhead.com/spell=307471/crush"></a> will be mainly tanking'
                         ],
                     ],
                     'dps' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Avoid standing in water on edge of room!',
+                            'Dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=307945/umbral-eruption"></a> and don\'t stand in stuff',
+                            'Stand behind boss and dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=306928/umbral-breath"></a>',
+                            'Kite fixated <a class="text-mechanic" href="https://www.wowhead.com/spell=306692/living-miasma"></a> adds 15 yards (or as far as possible) away from the raid'
                         ],
                     ],
                     'healer' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Avoid standing in water on edge of room!',
+                            'Spot heal <a class="text-mechanic" href="https://www.wowhead.com/spell=307358/debilitating-spit"></a>, first person may need to use a personal or external to help with damage',
+                            'Stand in mid range or behind boss to be able to dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=306928/umbral-breath"></a>'
                         ],
                     ],
                 ];
                 $phaseTwo = [
                     'tank' => [
-                        'PHASE 2',
-                        'notes' => [],
+                        'PHASE 3',
+                        'notes' => [
+                            'Move boss around outer edge of the room as pools of goop spawn',
+                            'At 30% the boss gets a 25% damage buff, save CDs'
+                        ],
                     ],
                     'dps' => [
-                        'PHASE 2',
-                        'notes' => [],
+                        'PHASE 2 & 3',
+                        'notes' => [
+                            'Stand in mid range or behind boss to be able to dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=306930/entropic-breath"></a>',
+                            'Soak <a class="text-mechanic" href="https://www.wowhead.com/spell=308177/entropic-buildup"></a>, do not go over 4 stacks. Rotate multiple people in if needed',
+                            'Phase 3: Move along edge of room with tanks (follow behind) to drop <a class="text-mechanic" href="https://www.wowhead.com/spell=314736/bubbling-overflow"></a> in good spots'
+                        ],
                     ],
                     'healer' => [
-                        'PHASE 2',
-                        'notes' => [],
+                        'PHASE 2& 3',
+                        'notes' => [
+                            'Spot heal <a class="text-mechanic" href="https://www.wowhead.com/spell=307358/debilitating-spit"></a>, first person may need to use a personal or external to help with damage',
+                            'Phase 3: Move along edge of room with tanks (follow behind) to drop <a class="text-mechanic" href="https://www.wowhead.com/spell=314736/bubbling-overflow"></a> in good spots'
+                        ],
                     ],
                 ];
                 $mythic = [
-                    ''
+                    'Fixated players are rooted in place by <a class="text-mechanic" href="https://www.wowhead.com/spell=306692/living-miasma"></a>, so the raid must move away from them',
+                    'Any ability that "frees from movement impairing effects" such as Dispersion, Disengage with Posthaste, Vengeful Retreat, Master\'s Call, Blessing of Freedom, Druid shapeshift etc will free the player from the slow.',
+                    'After <a class="text-mechanic" href="https://www.wowhead.com/spell=306692/living-miasma"></a> dies, it leaves behind an item to pick up and use on the boss, like Grong orbs. Use this item immediately!',
                 ];
             }
 
@@ -415,30 +435,46 @@ class BossController extends Controller
             // drestagath
             if($boss == 'drest-agath') {
                 $assignments = [
-                    'tank' => 'Special Instructions',
-                    'dps' => 'DPS Instructions',
-                    'healer' => 'Healing Instructions'
+                    'tank' => 'Mark Tanks',
+                    'dps' => '---',
+                    'healer' => '---'
                 ];
                 $phaseOne = [
                     'tank' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Taunt after each <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310277/volatile-seed"></a>',
+                            'Take <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310277/volatile-seed"></a> to adds to apply Volatile Corruption',
+                            'One tank must always stay within range of boss to avoid <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310246/void-grip"></a> from triggering',
+                            'Move away from adds casting <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310329/entropic-crash"></a>',
+                            'Quickly identify the direction of the <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310406/void-glare"></a> beam and move out of it'
                         ],
                     ],
                     'dps' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Move away from tanks afflicted with <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310277/volatile-seed"></a> to allow them to debuff adds',
+                            'Move away from adds casting <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310329/entropic-crash"></a>',
+                            'Quickly identify the direction of the <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310406/void-glare"></a> beam and move out of it',
+                            'Quickly move away from your allies when afflicted with <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310358/mutterings-of-insanity"></a>.',
+                            'Add first, then boss',
+                            '.',
+                            'Melee: Focus on <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310358/mutterings-of-insanity"></a>',
+                            'Avoid the <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310358/mutterings-of-insanity"></a> zone that travels out from the tentacle during <a class="text-mechanic" href="https://ptr.wowhead.com/spell=308947/throes-of-agony"></a>.',
+                            '.',
+                            'Ranged: Focus on <a class="text-mechanic" href="https://ptr.wowhead.com/npc=157612/eye-of-drestagath"></a>, help with <a class="text-mechanic" href="https://ptr.wowhead.com/npc=157613/maw-of-drestagath"></a> after',
+                            '.',
+                            'Pick up <a class="text-mechanic" href="https://ptr.wowhead.com/spell=308377/void-infused-ichor"></a> from dead adds, these will bypass boss buff allowing damage',
+                            'Everyone help interrupt <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310552/mind-flay"></a>'
                         ],
                     ],
                     'healer' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Move away from tanks afflicted with <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310277/volatile-seed"></a> to allow them to debuff adds',
+                            'Move away from adds casting <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310329/entropic-crash"></a>',
+                            'Quickly identify the direction of the <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310406/void-glare"></a> beam and move out of it',
+                            'Quickly move away from your allies when afflicted with <a class="text-mechanic" href="https://ptr.wowhead.com/spell=310358/mutterings-of-insanity"></a>.'
                         ],
                     ],
                 ];
@@ -457,57 +493,9 @@ class BossController extends Controller
                     ],
                 ];
                 $mythic = [
-                    ''
-                ];
-            }
-
-
-            // ilgynoth
-            if($boss == 'il-gynoth') {
-                $assignments = [
-                    'tank' => 'Special Instructions',
-                    'dps' => 'DPS Instructions',
-                    'healer' => 'Healing Instructions'
-                ];
-                $phaseOne = [
-                    'tank' => [
-                        'PHASE 1',
-                        'notes' => [
-                            'STEP1',
-                            'STEP2'
-                        ],
-                    ],
-                    'dps' => [
-                        'PHASE 1',
-                        'notes' => [
-                            'STEP1',
-                            'STEP2'
-                        ],
-                    ],
-                    'healer' => [
-                        'PHASE 1',
-                        'notes' => [
-                            'STEP1',
-                            'STEP2'
-                        ],
-                    ],
-                ];
-                $phaseTwo = [
-                    'tank' => [
-                        'PHASE 2',
-                        'notes' => [],
-                    ],
-                    'dps' => [
-                        'PHASE 2',
-                        'notes' => [],
-                    ],
-                    'healer' => [
-                        'PHASE 2',
-                        'notes' => [],
-                    ],
-                ];
-                $mythic = [
-                    ''
+                    '<a class="text-mechanic" href="https://ptr.wowhead.com/spell=315712/throes-of-dismemberment"></a> is active',
+                    'When an appendage dies, it causes all appendages of the same type to cast their Agony Ability',
+                    'Killing adds in waves seems to be best option, but this may change'
                 ];
             }
 
@@ -515,49 +503,129 @@ class BossController extends Controller
             // vexiona
             if($boss == 'vexiona') {
                 $assignments = [
-                    'tank' => 'Special Instructions',
-                    'dps' => 'DPS Instructions',
-                    'healer' => 'Healing Instructions'
+                    'tank' => 'Set initial Diamond Markers for void drops',
+                    'dps' => '---',
+                    'healer' => '---'
                 ];
                 $phaseOne = [
                     'tank' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Face boss away from raid to keep <a class="text-mechanic" href="https://www.wowhead.com/spell=307297/twilight-breath"></a> from hitting them',
+                            'Face the <a class="text-mechanic" href="https://www.wowhead.com/npc=162719/void-ascendant"></a> add away from your allies when it casts <a class="text-mechanic" href="https://www.wowhead.com/spell=307421/annihilation"></a>. Face it towards Cultist adds to damage them!',
+                            'Pick up the <a class="text-mechanic" href="https://www.wowhead.com/spell=306878/gift-of-the-void"></a> orb and use the <a class="text-mechanic" href="https://www.wowhead.com/spell=307421/annihilation"></a> extra action button to reset <a class="text-mechanic" href="https://www.wowhead.com/spell=307019/void-corruption"></a> stacks'
                         ],
                     ],
                     'dps' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Be loosely spread for when <a class="text-mechanic" href="https://www.wowhead.com/spell=307317/encroaching-shadows"></a> is applied to avoid splash damage',
+                            'Move to edge of room when afflicted with <a class="text-mechanic" href="https://www.wowhead.com/spell=307317/encroaching-shadows"></a> to drop <a class="text-mechanic" href="https://www.wowhead.com/spell=307343/shadowy-residue"></a> in good spots',
+                            'Interrupt the Ritualist add and nuke down all adds as soon as possible'
                         ],
                     ],
                     'healer' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Keep tanks healthy during <a class="text-mechanic" href="https://www.wowhead.com/spell=307359/despair"></a> to help with raid damage after it expires',
+                            'Healers should dispel the <a class="text-mechanic" href="https://www.wowhead.com/spell=307421/annihilation"></a> targeted tank at least once during the beam to reduce the damage he takes',
+                            'Be loosely spread for when <a class="text-mechanic" href="https://www.wowhead.com/spell=307317/encroaching-shadows"></a> is applied to avoid splash damage',
+                            'Move to edge of room when afflicted with <a class="text-mechanic" href="https://www.wowhead.com/spell=307317/encroaching-shadows"></a> to drop <a class="text-mechanic" href="https://www.wowhead.com/spell=307343/shadowy-residue"></a> in good spots'
                         ],
                     ],
                 ];
                 $phaseTwo = [
                     'tank' => [
                         'PHASE 2',
-                        'notes' => [],
+                        'notes' => [
+                            'Dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=307218/twilight-decimator"></a> when boss swoops across room',
+                            '.',
+                            'Phase 3: Stay within 6 yards of another player to avoid the haste reduction from <a class="text-mechanic" href="https://www.wowhead.com/spell=307284/terrifying-presence"></a>'
+                        ],
                     ],
                     'dps' => [
                         'PHASE 2',
-                        'notes' => [],
+                        'notes' => [
+                            'Dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=307218/twilight-decimator"></a> when boss swoops across room',
+                            'Continue to interrupt and kill Cultist adds',
+                            'Continue to place <a class="text-mechanic" href="https://www.wowhead.com/spell=307343/shadowy-residue"></a> pools in low traffic areas',
+                            '.',
+                            'Phase 3: Stay within 6 yards of another player to avoid the haste reduction from <a class="text-mechanic" href="https://www.wowhead.com/spell=307284/terrifying-presence"></a>',
+                            'Phase 3: Run away from the boss 20 yards during <a class="text-mechanic" href="https://www.wowhead.com/spell=307639/heart-of-darkness"></a>'
+                        ],
                     ],
                     'healer' => [
                         'PHASE 2',
-                        'notes' => [],
+                        'notes' => [
+                            'Dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=307218/twilight-decimator"></a> when boss swoops across room',
+                            'Continue to place <a class="text-mechanic" href="https://www.wowhead.com/spell=307343/shadowy-residue"></a> pools in low traffic areas',
+                            '.',
+                            'Phase 3: Stay within 6 yards of another player to avoid the haste reduction from <a class="text-mechanic" href="https://www.wowhead.com/spell=307284/terrifying-presence"></a>'
+                        ],
                     ],
                 ];
                 $mythic = [
-                    ''
+                    'Coming Soon...'
+                ];
+            }
+
+
+            // ilgynoth
+            if($boss == 'il-gynoth') {
+                $assignments = [
+                    'tank' => '---',
+                    'dps' => '---',
+                    'healer' => '---'
+                ];
+                $phaseOne = [
+                    'tank' => [
+                        'PHASE 1',
+                        'notes' => [
+                            'Rotate boss as needed to make sure the <a class="text-mechanic" href="https://www.wowhead.com/spell=309961/eye-of-nzoth"></a> doesn\'t hit the raid'
+                        ],
+                    ],
+                    'dps' => [
+                        'PHASE 1',
+                        'notes' => [
+                            'Kite the  <a class="text-mechanic" href="https://www.wowhead.com/spell=310319/corruptors-gaze"></a> beams into low traffic areas, ideally around the edges of the room or over areas previously covered by beams'
+                        ],
+                    ],
+                    'healer' => [
+                        'PHASE 1',
+                        'notes' => [
+                            'Kite the  <a class="text-mechanic" href="https://www.wowhead.com/spell=310319/corruptors-gaze"></a> beams into low traffic areas, ideally around the edges of the room or over areas previously covered by beams'
+                        ],
+                    ],
+                ];
+                $phaseTwo = [
+                    'tank' => [
+                        'PHASE 2',
+                        'notes' => [
+                            'Move to an <a class="text-mechanic" href="https://www.wowhead.com/npc=158343/organ-of-corruption"></a> and kill it as soon as possible',
+                        ],
+                    ],
+                    'dps' => [
+                        'PHASE 2',
+                        'notes' => [
+                            'Move to an <a class="text-mechanic" href="https://www.wowhead.com/npc=158343/organ-of-corruption"></a> and kill it as soon as possible',
+                            'Help interrupt the <a class="text-mechanic" href="https://www.wowhead.com/spell=310788/pumping-blood"></a> ability cast by the <a class="text-mechanic" href="https://www.wowhead.com/npc=158343/organ-of-corruption"></a>',
+                            'One small team of interrupters should move to each organ that is not being killed this phase, so that they can kick the <a class="text-mechanic" href="https://www.wowhead.com/spell=310788/pumping-blood"></a> cast',
+                            'Move away from allies when afflicted with <a class="text-mechanic" href="https://www.wowhead.com/spell=311159/cursed-blood"></a>',
+                            'kill any <a class="text-mechanic" href="https://www.wowhead.com/npc=159514/blood-of-nyalotha"></a> that spawn'
+                        ],
+                    ],
+                    'healer' => [
+                        'PHASE 2',
+                        'notes' => [
+                            'Move to an <a class="text-mechanic" href="https://www.wowhead.com/npc=158343/organ-of-corruption"></a> and kill it as soon as possible',
+                            'Help interrupt the <a class="text-mechanic" href="https://www.wowhead.com/spell=310788/pumping-blood"></a> ability cast by the <a class="text-mechanic" href="https://www.wowhead.com/npc=158343/organ-of-corruption"></a>',
+                            'Move away from allies when afflicted with <a class="text-mechanic" href="https://www.wowhead.com/spell=311159/cursed-blood"></a>',
+                            'Dispel any  <a class="text-mechanic" href="https://www.wowhead.com/spell=312486/recurring-nightmare"></a> dots applied to players who are melee hit by the <a class="text-mechanic" href="https://www.wowhead.com/npc=159514/blood-of-nyalotha"></a> adds'
+                        ],
+                    ],
+                ];
+                $mythic = [
+                    'Coming Soon...'
                 ];
             }
 
@@ -565,49 +633,69 @@ class BossController extends Controller
             // raden
             if($boss == 'ra-den') {
                 $assignments = [
-                    'tank' => 'Special Instructions',
-                    'dps' => 'DPS Instructions',
-                    'healer' => 'Healing Instructions'
+                    'tank' => 'Set markers around room',
+                    'dps' => '---',
+                    'healer' => '---'
                 ];
                 $phaseOne = [
                     'tank' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Taunt after each <a class="text-mechanic" href="https://www.wowhead.com/spell=306819/nullifying-strike"></a>'
                         ],
                     ],
                     'dps' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Void Orb:',
+                            'Soak Unstable Void while facing the next missle toward a good location. Cannot soak with <a class="text-mechanic" href="https://www.wowhead.com/spell=306279/instability-exposure"></a>',
+                            'Kill <a class="text-mechanic" href="https://www.wowhead.com/npc=157366/void-hunter"></a>',
+                            'Stack on player with <a class="text-mechanic" href="https://www.wowhead.com/spell=306881/void-collapse"></a>',
+                            '.',
+                            'Vita Orb:',
+                            'Stack near boss to avoid gaining <a class="text-mechanic" href="https://www.wowhead.com/spell=306257/unstable-vita"></a>',
+                            'Bounce <a class="text-mechanic" href="https://www.wowhead.com/spell=306257/unstable-vita"></a> behind the raid',
+                            'Make sure <a class="text-mechanic" href="https://www.wowhead.com/spell=306257/unstable-vita"></a> are furthest from one another',
+                            'Kill <a class="text-mechanic" href="https://www.wowhead.com/npc=69872/crackling-stalker"></a> asap and interrupt'
                         ],
                     ],
                     'healer' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Heal off healing absorb <a class="text-mechanic" href="https://www.wowhead.com/spell=306184/unleashed-void"></a>'
                         ],
                     ],
                 ];
                 $phaseTwo = [
                     'tank' => [
                         'PHASE 2',
-                        'notes' => [],
+                        'notes' => [
+                            'Try to stay 50% or lower health for <a class="text-mechanic" href="https://www.wowhead.com/spell=313213/decaying-strike"></a> to help with <a class="text-mechanic" href="https://www.wowhead.com/spell=313227/decaying-wound"></a>',
+                            'Dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=310003/void-eruption"></a> zones',
+                        ],
                     ],
                     'dps' => [
                         'PHASE 2',
-                        'notes' => [],
+                        'notes' => [
+                            'Break the bonds when targeted',
+                            'Stack near boss to help healers heal off <a class="text-mechanic" href="https://www.wowhead.com/spell=309852/ruin"></a>',
+                            'Dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=310003/void-eruption"></a> zones',
+                            'Move away from your chained partner when afflicted with <a class="text-mechanic" href="https://www.wowhead.com/spell=310019/charged-bonds"></a>',
+                            'Kill boss before too many <a class="text-mechanic" href="https://www.wowhead.com/spell=309755/lingering-energies"></a> stacks!'
+                        ],
                     ],
                     'healer' => [
                         'PHASE 2',
-                        'notes' => [],
+                        'notes' => [
+                            'Watch for <a class="text-mechanic" href="https://www.wowhead.com/spell=309852/ruin"></a> and heal off quick',
+                            'Let tanks be 50% or lower health for <a class="text-mechanic" href="https://www.wowhead.com/spell=313213/decaying-strike"></a> hit',
+                            'Dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=310003/void-eruption"></a> zones',
+                            'Move away from your chained partner when afflicted with <a class="text-mechanic" href="https://www.wowhead.com/spell=310019/charged-bonds"></a>'
+                        ],
                     ],
                 ];
                 $mythic = [
-                    ''
+                    'Coming Soon...'
                 ];
             }
 
@@ -615,30 +703,27 @@ class BossController extends Controller
             // carapace
             if($boss == 'carapace') {
                 $assignments = [
-                    'tank' => 'Special Instructions',
-                    'dps' => 'DPS Instructions',
-                    'healer' => 'Healing Instructions'
+                    'tank' => '---',
+                    'dps' => '---',
+                    'healer' => '---'
                 ];
                 $phaseOne = [
                     'tank' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Coming Soon...'
                         ],
                     ],
                     'dps' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Coming Soon...'
                         ],
                     ],
                     'healer' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Coming Soon...'
                         ],
                     ],
                 ];
@@ -657,7 +742,7 @@ class BossController extends Controller
                     ],
                 ];
                 $mythic = [
-                    ''
+                    'Coming Soon...'
                 ];
             }
 
@@ -665,30 +750,27 @@ class BossController extends Controller
             // nzoth
             if($boss == 'n-zoth') {
                 $assignments = [
-                    'tank' => 'Special Instructions',
-                    'dps' => 'DPS Instructions',
-                    'healer' => 'Healing Instructions'
+                    'tank' => '---',
+                    'dps' => '---',
+                    'healer' => '---'
                 ];
                 $phaseOne = [
                     'tank' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Coming Soon...'
                         ],
                     ],
                     'dps' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Coming Soon...'
                         ],
                     ],
                     'healer' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Coming Soon...'
                         ],
                     ],
                 ];
