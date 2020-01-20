@@ -125,6 +125,9 @@ body {
 .card-duty {
     background-color: #6f92bd;
     padding: 10px;
+    color: #212121!important;
+    font-size: 1.05em;
+    padding: 10px 20px;
 }
 .card-phase {
     background-color: #FFD966;
