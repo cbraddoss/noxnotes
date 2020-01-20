@@ -14,7 +14,7 @@
             <a class="nav-link @if($role == 'healer') {{ 'active' }} @endif" href="/{{ $boss }}/healer">Healer</a>
         </li>
         <li class="nav-item float-right">
-            <button type="button" class="btn btn-dark float-right" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+            <button type="button" class="btn btn-dark float-right toggle-map-btn" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
                 Toggle Map
             </button>
         </li>
@@ -25,10 +25,6 @@
     <a id="boss1"></a>
     <div class="container bg-secondary">
         <div class="boss-map-container float-right">
-
-<button type="button" class="btn btn-dark float-right" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
-                Toggle Map
-            </button>
             <div class="collapse multi-collapse boss-map-big-container" id="multiCollapseExample1">
                 <div class="card card-body">
                     <img src="https://s3.amazonaws.com/noxguild/notes/{{ $boss }}-map.jpg" alt="{{ ucfirst($boss) }} Map" class="float-right boss-map-big">

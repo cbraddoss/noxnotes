@@ -741,18 +741,27 @@ class BossController extends Controller
                     'tank' => [
                         'PHASE 1',
                         'notes' => [
+                            'Coming Soon...',
+                            'Coming Soon...',
+                            'Coming Soon...',
                             'Coming Soon...'
                         ],
                     ],
                     'dps' => [
                         'PHASE 1',
                         'notes' => [
+                            'Coming Soon...',
+                            'Coming Soon...',
+                            'Coming Soon...',
                             'Coming Soon...'
                         ],
                     ],
                     'healer' => [
                         'PHASE 1',
                         'notes' => [
+                            'Coming Soon...',
+                            'Coming Soon...',
+                            'Coming Soon...',
                             'Coming Soon...'
                         ],
                     ],
@@ -772,6 +781,9 @@ class BossController extends Controller
                     ],
                 ];
                 $mythic = [
+                    'Coming Soon...',
+                    'Coming Soon...',
+                    'Coming Soon...',
                     'Coming Soon...'
                 ];
             }
@@ -788,18 +800,27 @@ class BossController extends Controller
                     'tank' => [
                         'PHASE 1',
                         'notes' => [
+                            'Coming Soon...',
+                            'Coming Soon...',
+                            'Coming Soon...',
                             'Coming Soon...'
                         ],
                     ],
                     'dps' => [
                         'PHASE 1',
                         'notes' => [
+                            'Coming Soon...',
+                            'Coming Soon...',
+                            'Coming Soon...',
                             'Coming Soon...'
                         ],
                     ],
                     'healer' => [
                         'PHASE 1',
                         'notes' => [
+                            'Coming Soon...',
+                            'Coming Soon...',
+                            'Coming Soon...',
                             'Coming Soon...'
                         ],
                     ],
@@ -819,7 +840,10 @@ class BossController extends Controller
                     ],
                 ];
                 $mythic = [
-                    ''
+                    'Coming Soon...',
+                    'Coming Soon...',
+                    'Coming Soon...',
+                    'Coming Soon...'
                 ];
             }
 
