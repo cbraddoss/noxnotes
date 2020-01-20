@@ -34,7 +34,7 @@ class BossController extends Controller
                 'PHASE 1',
                 'notes' => [
                     'Always stand on side of boss during phase 1',
-                    'Watch for <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306111/incineration"></a> cast and move out 20-30 yards to avoid raid damage',
+                    'Watch for <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306111/incineration"></a> cast, get out of raid and spread out 20-30 yards to avoid raid damage',
                     'Move away from boss during <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306289/gale-blast"></a> and spread 5 yards apart'
                 ],
             ],
@@ -42,7 +42,7 @@ class BossController extends Controller
                 'PHASE 1',
                 'notes' => [
                     'Always stand on side of boss during phase 1',
-                    'Watch for <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306111/incineration"></a> cast and move out 20-30 yards to avoid raid damage',
+                    'Watch for <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306111/incineration"></a> cast, get out of raid and spread out 20-30 yards to avoid raid damage',
                     'Move away from boss during <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306289/gale-blast"></a> and spread 5 yards apart'
                 ],
             ],
@@ -180,7 +180,7 @@ class BossController extends Controller
                     'tank' => [
                         'PHASE 1',
                         'notes' => [
-                            '-Taunt swap when <a class="text-mechanic" href="https://www.wowhead.com/spell=307977/shadow-shock"></a> times out (usually 4-6 stacks)',
+                            'Taunt swap when <a class="text-mechanic" href="https://www.wowhead.com/spell=307977/shadow-shock"></a> times out (usually 4-6 stacks)',
                             'Help cc <a class="text-mechanic" href="https://www.wowhead.com/npc=160990/image-of-absolution"></a>',
                             'Try to enter phase 2 with no <a class="text-mechanic" href="https://www.wowhead.com/spell=307937/shred-psyche"></a> adds up'
                         ],
@@ -373,8 +373,8 @@ class BossController extends Controller
                     'tank' => [
                         'PHASE 1',
                         'notes' => [
-                            'STEP1',
-                            'STEP2'
+                            'Grong style taunt combo, swap at [Crush] and [Dissolve]',
+                            'Tank with [Crush] debuff cannot take dissolve'
                         ],
                     ],
                     'dps' => [
