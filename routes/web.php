@@ -12,7 +12,8 @@
 */
 
 Route::get('/', 'BossController@index');
-Route::get('/{boss}', 'BossController@bosses');
+Route::get('/{boss}', 'BossController@boss');
+Route::get('/{boss}/{role}', 'BossController@bosses');
 
 // Route::view('/', 'wrathion');
 // Route::view('/maut', 'maut');

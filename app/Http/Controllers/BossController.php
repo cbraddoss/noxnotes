@@ -7,75 +7,42 @@ use Illuminate\Http\Request;
 class BossController extends Controller
 {
     /**
-     * Show Wrathion
+     * Redirect to first boss
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        $boss = 'wrathion';
+        return redirect('/wrathion/dps');
+    }
 
-        $assignments = [
-            'tank' => 'Set markers around the room',
-            'dps' => 'Assign soakers for <a class="text-mechanic" href="https://ptr.wowhead.com/spell=308682/scales-of-wrathion"></a>',
-            'healer' => 'Check the healing doc for proper healing assignments'
-        ];
-        $phaseOne = [
-            'tank' => [
-                'PHASE 1',
-                'notes' => [
-                    'Keep head <a class="text-mechanic" href="https://ptr.wowhead.com/spell=305978/searing-breath"></a> and tail <a class="text-mechanic" href="https://ptr.wowhead.com/spell=307974/tail-swipe"></a> pointed away from raid (use markers for phase transitions to help with positioning)',
-                    'Taunt on 2-3 stacks of <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306015/searing-armor"></a>',
-                    'Run with group to safe spots to avoid <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306735/burning-cataclysm"></a>',
-                    'After <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306735/burning-cataclysm"></a> and <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306794/molten-eruption"></a> are done, quickly position boss in middle of room and away from raid (again, use markers)'
-                ],
-            ],
-            'dps' => [
-                'PHASE 1',
-                'notes' => [
-                    'Always stand on side of boss during phase 1',
-                    'Watch for <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306111/incineration"></a> cast, get out of raid and spread out 20-30 yards to avoid raid damage',
-                    'Move away from boss during <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306289/gale-blast"></a> and spread 5 yards apart'
-                ],
-            ],
-            'healer' => [
-                'PHASE 1',
-                'notes' => [
-                    'Always stand on side of boss during phase 1',
-                    'Watch for <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306111/incineration"></a> cast, get out of raid and spread out 20-30 yards to avoid raid damage',
-                    'Move away from boss during <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306289/gale-blast"></a> and spread 5 yards apart'
-                ],
-            ],
-        ];
-        $phaseTwo = [
-            'tank' => [
-                'PHASE 2',
-                'notes' => [
-                    'Help find <a class="text-mechanic" href="https://ptr.wowhead.com/npc=160291/ashwalker-assassin"></a> quickly with AOE and stealth remove abilities and dps down pillars',
-                    'At the end of phase 2, be sure to position boss quick to avoid frontals on raid (use markers)'
-                ],
-            ],
-            'dps' => [
-                'PHASE 2',
-                'notes' => [
-                    'Help find <a class="text-mechanic" href="https://ptr.wowhead.com/npc=160291/ashwalker-assassin"></a> quickly with AOE and stealth remove abilities and dps down <a class="text-mechanic" href="https://ptr.wowhead.com/npc=158327/crackling-shard"></a> pillars',
-                    'If you are assigned a <a class="text-mechanic" href="https://ptr.wowhead.com/spell=308682/scales-of-wrathion"></a> soak and <a class="text-mechanic" href="https://ptr.wowhead.com/npc=158327/crackling-shard"></a> clear, be quick and get as many as possible'
-                ],
-            ],
-            'healer' => [
-                'PHASE 2',
-                'notes' => [
-                    'Help find <a class="text-mechanic" href="https://ptr.wowhead.com/npc=160291/ashwalker-assassin"></a> quickly with AOE and stealth remove abilities and help dps down <a class="text-mechanic" href="https://ptr.wowhead.com/npc=158327/crackling-shard"></a> pillars'
-                ],
-            ],
-        ];
-        $mythic = [
-            'Watch <a class="text-mechanic" href="https://ptr.wowhead.com/spell=313250/creeping-madness"></a> debuff (it stacks!). You can try to drop it by not moving for 45 seconds. Debuff can be removed also (freedom, etc)',
-            '<a class="text-mechanic" href="https://ptr.wowhead.com/spell=307013/burning-madness"></a> only removes the <a class="text-mechanic" href="https://ptr.wowhead.com/spell=313175/hardened-core"></a> debuff, all pillars must be dpsed down now',
-            'Some of the pillars/fire patches will remain (this is the psuedo enrage)'
+    /**
+     * Redirect old routes to new routes
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function boss(Request $request)
+    {
+        $bosses = [
+            'wrathion',
+            'maut',
+            'skitra',
+            'inquisitor',
+            'hivemind',
+            'shad-har',
+            'drest-agath',
+            'il-gynoth',
+            'vexiona',
+            'ra-den',
+            'carapace',
+            'n-zoth',
         ];
 
-        return view('boss', compact('boss', 'assignments', 'phaseOne', 'phaseTwo', 'mythic'));
+        if(in_array($request['boss'], $bosses)) {
+            return redirect('/'.$request['boss'].'/dps');
+        }
+
+        abort(404);
     }
 
     /**
@@ -100,9 +67,73 @@ class BossController extends Controller
             'n-zoth',
         ];
 
-        if(in_array($request['boss'], $bosses) || empty($request)) {
+        if(in_array($request['boss'], $bosses)) {
 
             $boss = $request['boss'];
+            $role = $request['role'];
+
+            // Wrathion
+            if($boss == 'wrathion') {
+                $assignments = [
+                    'tank' => 'Set markers around the room',
+                    'dps' => 'Assign soakers for <a class="text-mechanic" href="https://ptr.wowhead.com/spell=308682/scales-of-wrathion"></a>',
+                    'healer' => 'Check the healing doc for proper healing assignments'
+                ];
+                $phaseOne = [
+                    'tank' => [
+                        'PHASE 1',
+                        'notes' => [
+                            'Keep head <a class="text-mechanic" href="https://ptr.wowhead.com/spell=305978/searing-breath"></a> and tail <a class="text-mechanic" href="https://ptr.wowhead.com/spell=307974/tail-swipe"></a> pointed away from raid (use markers for phase transitions to help with positioning)',
+                            'Taunt on 2-3 stacks of <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306015/searing-armor"></a>',
+                            'Run with group to safe spots to avoid <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306735/burning-cataclysm"></a>',
+                            'After <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306735/burning-cataclysm"></a> and <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306794/molten-eruption"></a> are done, quickly position boss in middle of room and away from raid (again, use markers)'
+                        ],
+                    ],
+                    'dps' => [
+                        'PHASE 1',
+                        'notes' => [
+                            'Always stand on side of boss during phase 1',
+                            'Watch for <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306111/incineration"></a> cast, get out of raid and spread out 20-30 yards to avoid raid damage',
+                            'Move away from boss during <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306289/gale-blast"></a> and spread 5 yards apart'
+                        ],
+                    ],
+                    'healer' => [
+                        'PHASE 1',
+                        'notes' => [
+                            'Always stand on side of boss during phase 1',
+                            'Watch for <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306111/incineration"></a> cast, get out of raid and spread out 20-30 yards to avoid raid damage',
+                            'Move away from boss during <a class="text-mechanic" href="https://ptr.wowhead.com/spell=306289/gale-blast"></a> and spread 5 yards apart'
+                        ],
+                    ],
+                ];
+                $phaseTwo = [
+                    'tank' => [
+                        'PHASE 2',
+                        'notes' => [
+                            'Help find <a class="text-mechanic" href="https://ptr.wowhead.com/npc=160291/ashwalker-assassin"></a> quickly with AOE and stealth remove abilities and dps down pillars',
+                            'At the end of phase 2, be sure to position boss quick to avoid frontals on raid (use markers)'
+                        ],
+                    ],
+                    'dps' => [
+                        'PHASE 2',
+                        'notes' => [
+                            'Help find <a class="text-mechanic" href="https://ptr.wowhead.com/npc=160291/ashwalker-assassin"></a> quickly with AOE and stealth remove abilities and dps down <a class="text-mechanic" href="https://ptr.wowhead.com/npc=158327/crackling-shard"></a> pillars',
+                            'If you are assigned a <a class="text-mechanic" href="https://ptr.wowhead.com/spell=308682/scales-of-wrathion"></a> soak and <a class="text-mechanic" href="https://ptr.wowhead.com/npc=158327/crackling-shard"></a> clear, be quick and get as many as possible'
+                        ],
+                    ],
+                    'healer' => [
+                        'PHASE 2',
+                        'notes' => [
+                            'Help find <a class="text-mechanic" href="https://ptr.wowhead.com/npc=160291/ashwalker-assassin"></a> quickly with AOE and stealth remove abilities and help dps down <a class="text-mechanic" href="https://ptr.wowhead.com/npc=158327/crackling-shard"></a> pillars'
+                        ],
+                    ],
+                ];
+                $mythic = [
+                    'Watch <a class="text-mechanic" href="https://ptr.wowhead.com/spell=313250/creeping-madness"></a> debuff (it stacks!). You can try to drop it by not moving for 45 seconds. Debuff can be removed also (freedom, etc)',
+                    '<a class="text-mechanic" href="https://ptr.wowhead.com/spell=307013/burning-madness"></a> only removes the <a class="text-mechanic" href="https://ptr.wowhead.com/spell=313175/hardened-core"></a> debuff, all pillars must be dpsed down now',
+                    'Some of the pillars/fire patches will remain (this is the psuedo enrage)'
+                ];
+            }
 
             // Maut
             if($boss == 'maut') {
@@ -611,14 +642,13 @@ class BossController extends Controller
                             'Help interrupt the <a class="text-mechanic" href="https://www.wowhead.com/spell=310788/pumping-blood"></a> ability cast by the <a class="text-mechanic" href="https://www.wowhead.com/npc=158343/organ-of-corruption"></a>',
                             'One small team of interrupters should move to each organ that is not being killed this phase, so that they can kick the <a class="text-mechanic" href="https://www.wowhead.com/spell=310788/pumping-blood"></a> cast',
                             'Move away from allies when afflicted with <a class="text-mechanic" href="https://www.wowhead.com/spell=311159/cursed-blood"></a>',
-                            'kill any <a class="text-mechanic" href="https://www.wowhead.com/npc=159514/blood-of-nyalotha"></a> that spawn'
+                            'Kill any <a class="text-mechanic" href="https://www.wowhead.com/npc=159514/blood-of-nyalotha"></a> that spawn'
                         ],
                     ],
                     'healer' => [
                         'PHASE 2',
                         'notes' => [
                             'Move to an <a class="text-mechanic" href="https://www.wowhead.com/npc=158343/organ-of-corruption"></a> and kill it as soon as possible',
-                            'Help interrupt the <a class="text-mechanic" href="https://www.wowhead.com/spell=310788/pumping-blood"></a> ability cast by the <a class="text-mechanic" href="https://www.wowhead.com/npc=158343/organ-of-corruption"></a>',
                             'Move away from allies when afflicted with <a class="text-mechanic" href="https://www.wowhead.com/spell=311159/cursed-blood"></a>',
                             'Dispel any  <a class="text-mechanic" href="https://www.wowhead.com/spell=312486/recurring-nightmare"></a> dots applied to players who are melee hit by the <a class="text-mechanic" href="https://www.wowhead.com/npc=159514/blood-of-nyalotha"></a> adds'
                         ],
@@ -655,7 +685,7 @@ class BossController extends Controller
                             'Vita Orb:',
                             'Stack near boss to avoid gaining <a class="text-mechanic" href="https://www.wowhead.com/spell=306257/unstable-vita"></a>',
                             'Bounce <a class="text-mechanic" href="https://www.wowhead.com/spell=306257/unstable-vita"></a> behind the raid',
-                            'Make sure <a class="text-mechanic" href="https://www.wowhead.com/spell=306257/unstable-vita"></a> are furthest from one another',
+                            'Make sure <a class="text-mechanic" href="https://www.wowhead.com/spell=306257/unstable-vita"></a> targets are furthest from one another',
                             'Kill <a class="text-mechanic" href="https://www.wowhead.com/npc=69872/crackling-stalker"></a> asap and interrupt'
                         ],
                     ],
@@ -793,7 +823,7 @@ class BossController extends Controller
                 ];
             }
 
-            return view('boss', compact('boss', 'assignments', 'phaseOne', 'phaseTwo', 'mythic'));
+            return view('boss', compact('boss', 'role', 'assignments', 'phaseOne', 'phaseTwo', 'mythic'));
         }
 
         abort(404);

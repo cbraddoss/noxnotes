@@ -1,12 +1,33 @@
 @extends('index')
 
 @section('page-body')
+
+<div class="container boss-tabs">
+    <ul class="nav nav-tabs boss-nav-tabs align-middle">
+        <li class="nav-item">
+            <a class="nav-link @if($role == 'dps') {{ 'active' }} @endif" href="/{{ $boss }}/dps">DPS</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @if($role == 'tank') {{ 'active' }} @endif" href="/{{ $boss }}/tank">Tank</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link @if($role == 'healer') {{ 'active' }} @endif" href="/{{ $boss }}/healer">Healer</a>
+        </li>
+        <li class="nav-item float-right">
+            <button type="button" class="btn btn-dark float-right" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                Toggle Map
+            </button>
+        </li>
+    </ul>
+</div>
+
 <div class="flex-center position-relative bosses">
     <a id="boss1"></a>
     <div class="container bg-secondary">
         <div class="boss-map-container float-right">
-            <button type="button" class="btn btn-dark float-right" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
-                <img src="https://s3.amazonaws.com/noxguild/notes/{{ $boss }}-map.jpg" alt="{{ ucfirst($boss) }} Map" class="float-right boss-map"><br/>Toggle Map
+
+<button type="button" class="btn btn-dark float-right" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">
+                Toggle Map
             </button>
             <div class="collapse multi-collapse boss-map-big-container" id="multiCollapseExample1">
                 <div class="card card-body">
@@ -16,26 +37,16 @@
 
         </div>
 
-        <h1 class="display-5 text-light">@if($boss == 'ra-den') {{ ucfirst($boss) }} @else {{ ucfirst(str_replace('-', '\'', $boss)) }} @endif</h1>
+        <h1 class="display-5 text-light">@if($boss == 'ra-den') {{ ucfirst($boss) }} @else {{ ucfirst(str_replace('-', '\'', $boss)) }} @endif @if($role == 'dps') {{ strtoupper($role) }} @else {{ ucfirst($role) }} @endif Notes</h1>
 
-        <ul class="nav nav-tabs boss-nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="dps-tab" data-toggle="tab" href="#dps" role="tab" aria-controls="dps" aria-selected="false">DPS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="tank-tab" data-toggle="tab" href="#tank" role="tab" aria-controls="tank" aria-selected="true">Tank</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="healer-tab" data-toggle="tab" href="#healer" role="tab" aria-controls="healer" aria-selected="false">Healer</a>
-            </li>
-        </ul>
+
 
         <div class="tab-content" id="myTabContent">
 
+            @if($role == 'dps')
             <div class="tab-pane fade show active" id="dps" role="tabpanel" aria-labelledby="dps-tab">
                 <div class="card bg-secondary text-light">
                     <div class="card-body">
-                        <h5 class="card-title display-7">DPS Quick Notes:</h5>
                         <h6 class="card-subtitle mb-2 card-duty text-dark">{!! $assignments['dps'] !!}</h6>
                         <ul class="list-group list-group-flush bg-dark text-light">
                             <li class="list-group-item card-phase text-dark">{!! $phaseOne['dps'][0] !!}</li>
@@ -54,10 +65,12 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="tank" role="tabpanel" aria-labelledby="tank-tab">
+            @endif
+
+            @if($role == 'tank')
+            <div class="tab-pane fade show active" id="tank" role="tabpanel" aria-labelledby="tank-tab">
                 <div class="card bg-secondary text-light">
                     <div class="card-body spec-cards">
-                        <h5 class="card-title display-7">Tank Quick Notes:</h5>
                         <h6 class="card-subtitle mb-2 card-duty text-dark">{!! $assignments['tank'] !!}</h6>
                         <ul class="list-group list-group-flush bg-dark text-light">
                             <li class="list-group-item card-phase text-dark">{!! $phaseOne['tank'][0] !!}</li>
@@ -76,10 +89,12 @@
                     </div>
                 </div>
             </div>
-            <div class="tab-pane fade" id="healer" role="tabpanel" aria-labelledby="healer-tab">
+            @endif
+
+            @if($role == 'healer')
+            <div class="tab-pane fade show active" id="healer" role="tabpanel" aria-labelledby="healer-tab">
                 <div class="card bg-secondary text-light">
                     <div class="card-body">
-                        <h5 class="card-title display-7">Healer Quick Notes:</h5>
                         <h6 class="card-subtitle mb-2 card-duty text-dark">{!! $assignments['healer'] !!}</h6>
                         <ul class="list-group list-group-flush bg-dark text-light">
                             <li class="list-group-item card-phase text-dark">{!! $phaseOne['healer'][0] !!}</li>
@@ -98,6 +113,8 @@
                     </div>
                 </div>
             </div>
+            @endif
+
         </div>
 
 <hr>
