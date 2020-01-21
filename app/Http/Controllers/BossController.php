@@ -993,57 +993,98 @@ class BossController extends Controller
                     'tank' => [
                         'PHASE 1',
                         'notes' => [
-                            'Coming Soon...',
-                            'Coming Soon...',
-                            'Coming Soon...',
-                            'Coming Soon...'
+                            'Don\'t let your sanity reach 0! Use your <a class="text-mechanic" href="https://www.wowhead.com/spell=316271/azeroths-radiance"></a> extra action button to regain Sanity',
+                            'Keep <a class="text-mechanic" href="https://www.wowhead.com/npc=158376/psychus"></a> near <a class="text-mechanic" href="https://www.wowhead.com/npc=159578/exposed-synapse"></a> to get the 50% damage increase from <a class="text-mechanic" href="https://www.wowhead.com/spell=313184/synaptic-shock"></a>',
+                            'Stay on edge of room so <a class="text-mechanic" href="https://www.wowhead.com/spell=309991/anguish"></a> drops in good locations',
+                            'Find your floating body when <a class="text-mechanic" href="https://www.wowhead.com/npc=158376/psychus"></a> dies before <a class="text-mechanic" href="https://www.wowhead.com/spell=317292/collapsing-mindscape"></a> triggers'
                         ],
                     ],
                     'dps' => [
                         'PHASE 1',
                         'notes' => [
-                            'Coming Soon...',
-                            'Coming Soon...',
-                            'Coming Soon...',
-                            'Coming Soon...'
+                            'Don\'t let your sanity reach 0! Use your <a class="text-mechanic" href="https://www.wowhead.com/spell=316271/azeroths-radiance"></a> extra action button to regain Sanity',
+                            'Focus on <a class="text-mechanic" href="https://www.wowhead.com/npc=159578/exposed-synapse"></a> until boss has 5 stacks of <a class="text-mechanic" href="https://www.wowhead.com/spell=313184/synaptic-shock"></a>',
+                            'Keep 5 yards apart to avoid extra damage from <a class="text-mechanic" href="https://www.wowhead.com/spell=309991/anguish"></a>',
+                            'Find your floating body when <a class="text-mechanic" href="https://www.wowhead.com/npc=158376/psychus"></a> dies before <a class="text-mechanic" href="https://www.wowhead.com/spell=317292/collapsing-mindscape"></a> triggers',
+                            'Kill <a class="text-mechanic" href="https://www.wowhead.com/npc=158376/psychus"></a> before he gains full energy'
                         ],
                     ],
                     'healer' => [
                         'PHASE 1',
                         'notes' => [
-                            'Coming Soon...',
-                            'Coming Soon...',
-                            'Coming Soon...',
-                            'Coming Soon...'
+                            'Don\'t let your sanity reach 0! Use your <a class="text-mechanic" href="https://www.wowhead.com/spell=316271/azeroths-radiance"></a> extra action button to regain Sanity',
+                            'Keep 5 yards apart to avoid extra damage from <a class="text-mechanic" href="https://www.wowhead.com/spell=309991/anguish"></a>',
+                            'Find your floating body when <a class="text-mechanic" href="https://www.wowhead.com/npc=158376/psychus"></a> dies before <a class="text-mechanic" href="https://www.wowhead.com/spell=317292/collapsing-mindscape"></a> triggers'
                         ],
                     ],
                 ];
                 $phaseTwo = [
                     'tank' => [
                         'PHASE 2',
-                        'notes' => [],
+                        'notes' => [
+                            'Clear a path to the wall by damaging <a class="text-mechanic" href="https://www.wowhead.com/spell=318896/corrupted-neuron"></a>',
+                            'Look at your arrow and either stand near boss or near edge of the room when <a class="text-mechanic" href="https://www.wowhead.com/spell=315772/mindgrasp"></a> is cast',
+                            'Find your <a class="text-mechanic" href="https://www.wowhead.com/spell=309980/paranoia"></a> partner!',
+                            'Tank Basher Tentacles',
+                            'Half the raid each time will need to go through the <a class="text-mechanic" href="https://www.wowhead.com/spell=309046/mindgate"></a>',
+                            'Dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=313793/flames-of-insanity"></a> during first Mind Realm',
+                            'Avoid moving alot due to <a class="text-mechanic" href="https://www.wowhead.com/spell=315709/tread-lightly"></a> during second Mind Realm'
+                        ],
                     ],
                     'dps' => [
                         'PHASE 2',
-                        'notes' => [],
+                        'notes' => [
+                            'Damage the boss when it has <a class="text-mechanic" href="https://www.wowhead.com/spell=312155/shattered-ego"></a>',
+                            'Clear a path to the wall by damaging <a class="text-mechanic" href="https://www.wowhead.com/spell=318896/corrupted-neuron"></a>',
+                            'Look at your arrow and either stand near boss or near edge of the room when <a class="text-mechanic" href="https://www.wowhead.com/spell=315772/mindgrasp"></a> is cast',
+                            'Find your <a class="text-mechanic" href="https://www.wowhead.com/spell=309980/paranoia"></a> partner!',
+                            'Focus down Basher Tentacles first',
+                            'Interrupt <a class="text-mechanic" href="https://www.wowhead.com/spell=313400/corrupted-mind"></a>',
+                            '<a class="text-mechanic" href="https://www.wowhead.com/npc=160249/spike-tentacle"></a> are lowest priority (dot, cleave)',
+                            'Half the raid each time will need to go through the <a class="text-mechanic" href="https://www.wowhead.com/spell=309046/mindgate"></a> to the Mind Realm',
+                            'Dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=313793/flames-of-insanity"></a> during first Mind Realm',
+                            'Avoid moving alot due to <a class="text-mechanic" href="https://www.wowhead.com/spell=315709/tread-lightly"></a> during second Mind Realm'
+                        ],
                     ],
                     'healer' => [
                         'PHASE 2',
-                        'notes' => [],
+                        'notes' => [
+                            'Clear a path to the wall by damaging <a class="text-mechanic" href="https://www.wowhead.com/spell=318896/corrupted-neuron"></a>',
+                            'Look at your arrow and either stand near boss or near edge of the room when <a class="text-mechanic" href="https://www.wowhead.com/spell=315772/mindgrasp"></a> is cast',
+                            'Find your <a class="text-mechanic" href="https://www.wowhead.com/spell=309980/paranoia"></a> partner!',
+                            'Dispel any <a class="text-mechanic" href="https://www.wowhead.com/spell=313400/corrupted-mind"></a>',
+                            'Half the raid each time will need to go through the <a class="text-mechanic" href="https://www.wowhead.com/spell=309046/mindgate"></a>',
+                            'Dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=313793/flames-of-insanity"></a> during first Mind Realm',
+                            'Avoid moving alot due to <a class="text-mechanic" href="https://www.wowhead.com/spell=315709/tread-lightly"></a> during second Mind Realm'
+                        ],
                     ],
                 ];
                 $phaseThree = [
                     'tank' => [
                         'PHASE 3',
-                        'notes' => [],
+                        'notes' => [
+                            'Move raid around the room to help with <a class="text-mechanic" href="https://www.wowhead.com/spell=309991/anguish"></a> placement',
+                            'Avoid <a class="text-mechanic" href="https://www.wowhead.com/spell=317874/stupefying-glare"></a>',
+                            '<a class="text-mechanic" href="https://www.wowhead.com/spell=317066/harvest-thoughts"></a> should be soaked by high sanity players'
+                        ],
                     ],
                     'dps' => [
                         'PHASE 3',
-                        'notes' => [],
+                        'notes' => [
+                            'Drop <a class="text-mechanic" href="https://www.wowhead.com/spell=309991/anguish"></a> to the side of the raid',
+                            'Keep dealing with <a class="text-mechanic" href="https://www.wowhead.com/spell=315772/mindgrasp"></a> and <a class="text-mechanic" href="https://www.wowhead.com/spell=309980/paranoia"></a>',
+                            'Avoid <a class="text-mechanic" href="https://www.wowhead.com/spell=317874/stupefying-glare"></a>',
+                            '<a class="text-mechanic" href="https://www.wowhead.com/spell=317066/harvest-thoughts"></a> should be soaked by high sanity players',
+                            'Kill Thought Harvester asap!'
+                        ],
                     ],
                     'healer' => [
                         'PHASE 3',
-                        'notes' => [],
+                        'notes' => [
+                            'Drop <a class="text-mechanic" href="https://www.wowhead.com/spell=309991/anguish"></a> to the side of the raid',
+                            'Avoid <a class="text-mechanic" href="https://www.wowhead.com/spell=317874/stupefying-glare"></a>',
+                            '<a class="text-mechanic" href="https://www.wowhead.com/spell=317066/harvest-thoughts"></a> should be soaked by high sanity players'
+                        ],
                     ],
                 ];
                 $mythic = [
