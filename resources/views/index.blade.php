@@ -103,7 +103,7 @@
 
         <div class="flex-center position-relative bg-secondary text-light text-center notes-footer">
             <div class="container py-5">
-                <p>&copy; 2020 Nox | US Zul'jin | <a href="https://noxguild.us">noxguild.us</a></p>
+                <p>&copy; 2020 Nox | US Zul'jin | <a target="_blank" href="https://noxguild.us">noxguild.us</a> | Made by: <a target="_blank" href="https://sanoks.tv/">sanoks.tv</a></p>
             </div>
         </div>
     </body>
