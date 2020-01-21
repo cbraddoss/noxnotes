@@ -890,7 +890,8 @@ class BossController extends Controller
                             'Taunt when <a class="text-mechanic" href="https://www.wowhead.com/spell=315954/black-scar"></a> debuff drops, usually after 2 <a class="text-mechanic" href="https://www.wowhead.com/spell=315947/mandible-slam"></a> casts',
                             '<a class="text-mechanic" href="https://www.wowhead.com/spell=313322/fragment-of-sanity"></a> can be gained breaking through <a class="text-mechanic" href="https://www.wowhead.com/spell=316847/adaptive-membrane"></a> on boss or adds',
                             'Avoid <a class="text-mechanic" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> slam location',
-                            'Help CC and kill <a class="text-mechanic" href="https://www.wowhead.com/spell=307042/adaptive-antigen"></a> after <a class="text-mechanic" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> is gone'
+                            'Help CC and kill <a class="text-mechanic" href="https://www.wowhead.com/spell=307042/adaptive-antigen"></a> after <a class="text-mechanic" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> is gone',
+                            'Tank <a class="text-mechanic" href="https://www.wowhead.com/npc=162429/fury-of-nzoth"></a> near Gaze of Madness for cleave and extra damage (3% when Gaze dies)'
                         ],
                     ],
                     'dps' => [
@@ -901,7 +902,8 @@ class BossController extends Controller
                             'Spread 10+ yards from other raiders when you get <a class="text-mechanic" href="https://www.wowhead.com/spell=306973/madness-bomb"></a>',
                             '<a class="text-mechanic" href="https://www.wowhead.com/spell=313322/fragment-of-sanity"></a> can be gained breaking through <a class="text-mechanic" href="https://www.wowhead.com/spell=316847/adaptive-membrane"></a> on boss or adds',
                             'Avoid <a class="text-mechanic" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> slam location. Once down, climb up and kill <a class="text-mechanic" href="https://www.wowhead.com/spell=307306/horrific-hemorrhage"></a>',
-                            'CC and kill <a class="text-mechanic" href="https://www.wowhead.com/spell=307042/adaptive-antigen"></a> after <a class="text-mechanic" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> is gone'
+                            'CC and kill <a class="text-mechanic" href="https://www.wowhead.com/spell=307042/adaptive-antigen"></a> after <a class="text-mechanic" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> is gone',
+                            'Kill Gaze of Madness as soon as it spawns. Be careful not to interrupt to avoid extra sanity loss to the raid'
                         ],
                     ],
                     'healer' => [
@@ -921,7 +923,8 @@ class BossController extends Controller
                             'Clear <a class="text-mechanic" href="https://www.wowhead.com/npc=157461/mycelial-cyst"></a> (similar to g\'huun cysts) to get to and kill <a class="text-mechanic" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a>',
                             'Once <a class="text-mechanic" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a> are gone, use extra action button to go to other side',
                             'Watch out for <a class="text-mechanic" href="https://www.wowhead.com/spell=307092/occipital-blast"></a>',
-                            'Reset sanity before phase 3 by visiting <a class="text-mechanic" href="https://www.wowhead.com/npc=163397/wrathion"></a> one last time'
+                            'Reset sanity before phase 3 by visiting <a class="text-mechanic" href="https://www.wowhead.com/npc=163397/wrathion"></a> one last time',
+                            'Watch out for <a class="text-mechanic" href="https://www.wowhead.com/spell=317627/infinite-void"></a> spawned after <a class="text-mechanic" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>, move boss if needed'
                         ],
                     ],
                     'dps' => [
@@ -930,7 +933,8 @@ class BossController extends Controller
                             'Clear <a class="text-mechanic" href="https://www.wowhead.com/npc=157461/mycelial-cyst"></a> (similar to g\'huun cysts) to get to and kill <a class="text-mechanic" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a>',
                             'Once <a class="text-mechanic" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a> are gone, use extra action button to go to other side',
                             'Watch out for <a class="text-mechanic" href="https://www.wowhead.com/spell=307092/occipital-blast"></a>',
-                            'Reset sanity before phase 3 by visiting <a class="text-mechanic" href="https://www.wowhead.com/npc=163397/wrathion"></a> one last time'
+                            'Reset sanity before phase 3 by visiting <a class="text-mechanic" href="https://www.wowhead.com/npc=163397/wrathion"></a> one last time',
+                            'Watch out for <a class="text-mechanic" href="https://www.wowhead.com/spell=317627/infinite-void"></a> spawned after <a class="text-mechanic" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>'
                         ],
                     ],
                     'healer' => [
@@ -940,7 +944,8 @@ class BossController extends Controller
                             'Once <a class="text-mechanic" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a> are gone, use extra action button to go to other side',
                             'Watch out for <a class="text-mechanic" href="https://www.wowhead.com/spell=307092/occipital-blast"></a>',
                             'The boss will cast <a class="text-mechanic" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>, watch raid health',
-                            'Reset sanity before phase 3 by visiting <a class="text-mechanic" href="https://www.wowhead.com/npc=163397/wrathion"></a> one last time'
+                            'Reset sanity before phase 3 by visiting <a class="text-mechanic" href="https://www.wowhead.com/npc=163397/wrathion"></a> one last time',
+                            'Watch out for <a class="text-mechanic" href="https://www.wowhead.com/spell=317627/infinite-void"></a> spawned after <a class="text-mechanic" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>'
                         ],
                     ],
                 ];
@@ -950,6 +955,7 @@ class BossController extends Controller
                         'notes' => [
                             'Continue dodging <a class="text-mechanic" href="https://www.wowhead.com/spell=315820/thrashing-tentacle"></a>, they will happen a lot more during this phase!',
                             'Everyone will be targeted by <a class="text-mechanic" href="https://www.wowhead.com/spell=306984/insanity-bomb"></a>, make sure to spread out',
+                            'Watch out for <a class="text-mechanic" href="https://www.wowhead.com/spell=317627/infinite-void"></a> spawned after <a class="text-mechanic" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>, move boss if needed'
                         ],
                     ],
                     'dps' => [
@@ -958,6 +964,7 @@ class BossController extends Controller
                             'Continue dodging <a class="text-mechanic" href="https://www.wowhead.com/spell=315820/thrashing-tentacle"></a>, they will happen a lot more during this phase!',
                             'Everyone will be targeted by <a class="text-mechanic" href="https://www.wowhead.com/spell=306984/insanity-bomb"></a>, make sure to spread out',
                             'Only kill <a class="text-mechanic" href="https://www.wowhead.com/npc=157452/nightmare-antigen"></a> when they get buffed by <a class="text-mechanic" href="https://www.wowhead.com/spell=316847/adaptive-membrane"></a>',
+                            'Watch out for <a class="text-mechanic" href="https://www.wowhead.com/spell=317627/infinite-void"></a> spawned after <a class="text-mechanic" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>'
                         ],
                     ],
                     'healer' => [
@@ -965,6 +972,7 @@ class BossController extends Controller
                         'notes' => [
                             'Continue dodging <a class="text-mechanic" href="https://www.wowhead.com/spell=315820/thrashing-tentacle"></a>, they will happen a lot more during this phase!',
                             'Everyone will be targeted by <a class="text-mechanic" href="https://www.wowhead.com/spell=306984/insanity-bomb"></a>, make sure to spread out',
+                            'Watch out for <a class="text-mechanic" href="https://www.wowhead.com/spell=317627/infinite-void"></a> spawned after <a class="text-mechanic" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>'
                         ],
                     ],
                 ];
@@ -1039,9 +1047,6 @@ class BossController extends Controller
                     ],
                 ];
                 $mythic = [
-                    'Coming Soon...',
-                    'Coming Soon...',
-                    'Coming Soon...',
                     'Coming Soon...'
                 ];
             }
