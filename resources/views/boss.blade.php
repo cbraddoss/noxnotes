@@ -34,7 +34,7 @@
                     <img src="https://s3.amazonaws.com/noxguild/notes/{{ $boss }}-map.jpg" alt="{{ ucfirst($boss) }} Map" class="float-right boss-map-big">
                 </div>
             </div>
-
+            <a class="map-clear" href="#maps"></a>
         </div>
 
         <div class="tab-content" id="myTabContent">
@@ -143,14 +143,15 @@
 
         </div>
 
-<hr>
-
+    <div class="mythic-notes">
+    <hr>
         <h2 class="display-7 text-light">Mythic Changes:</h2>
         <ul class="list-group list-group-flush bg-dark text-light">
             @foreach($mythic as $mythicNotes)
             <li class="list-group-item bg-dark text-light">{!! $mythicNotes !!}</li>
             @endforeach
         </ul>
+    </div>
 
     </div>
 </div>
