@@ -77,7 +77,7 @@ class BossController extends Controller
                 $assignments = [
                     'tank' => 'Set markers around the room',
                     'dps' => 'Assign soakers for <a class="text-mechanic" href="https://ptr.wowhead.com/spell=308682/scales-of-wrathion"></a>',
-                    'healer' => 'Check the healing doc for proper healing assignments'
+                    'healer' => ''
                 ];
                 $phaseOne = [
                     'tank' => [
@@ -644,7 +644,8 @@ class BossController extends Controller
                         'notes' => [
                             'Face boss away from raid to keep <a class="text-mechanic" href="https://www.wowhead.com/spell=307297/twilight-breath"></a> from hitting them',
                             'Face the <a class="text-mechanic" href="https://www.wowhead.com/npc=162719/void-ascendant"></a> add away from your allies when it casts <a class="text-mechanic" href="https://www.wowhead.com/spell=307421/annihilation"></a>. Face it towards Cultist adds to damage them!',
-                            'Pick up the <a class="text-mechanic" href="https://www.wowhead.com/spell=306878/gift-of-the-void"></a> orb and use the <a class="text-mechanic" href="https://www.wowhead.com/spell=307421/annihilation"></a> extra action button to reset <a class="text-mechanic" href="https://www.wowhead.com/spell=307019/void-corruption"></a> stacks'
+                            'Pick up the <a class="text-mechanic" href="https://www.wowhead.com/spell=306878/gift-of-the-void"></a> orb and use the <a class="text-mechanic" href="https://www.wowhead.com/spell=307421/annihilation"></a> extra action button to reset <a class="text-mechanic" href="https://www.wowhead.com/spell=307019/void-corruption"></a> stacks',
+                            'Help pick up additional <a class="text-mechanic" href="https://www.wowhead.com/npc=162717/sinister-soulcarver"></a> add (heroic only, all phases)'
                         ],
                     ],
                     'dps' => [
@@ -652,7 +653,8 @@ class BossController extends Controller
                         'notes' => [
                             'Be loosely spread for when <a class="text-mechanic" href="https://www.wowhead.com/spell=307317/encroaching-shadows"></a> is applied to avoid splash damage',
                             'Move to edge of room when afflicted with <a class="text-mechanic" href="https://www.wowhead.com/spell=307317/encroaching-shadows"></a> to drop <a class="text-mechanic" href="https://www.wowhead.com/spell=307343/shadowy-residue"></a> in good spots',
-                            'Interrupt the Ritualist add and nuke down all adds as soon as possible'
+                            'Interrupt the Ritualist add and nuke down all adds as soon as possible',
+                            'Help cc/stun/etc <a class="text-mechanic" href="https://www.wowhead.com/npc=162717/sinister-soulcarver"></a> add (heroic only)'
                         ],
                     ],
                     'healer' => [
@@ -699,7 +701,8 @@ class BossController extends Controller
                         'PHASE 3',
                         'notes' => [
                             'Stay within 6 yards of another player to avoid the haste reduction from <a class="text-mechanic" href="https://www.wowhead.com/spell=307284/terrifying-presence"></a>',
-                            'Run away from the boss 20 yards during <a class="text-mechanic" href="https://www.wowhead.com/spell=307639/heart-of-darkness"></a>'
+                            'Run away from the boss 20 yards during <a class="text-mechanic" href="https://www.wowhead.com/spell=307639/heart-of-darkness"></a>',
+                            'Help stack in <a class="text-mechanic" href="https://www.wowhead.com/spell=310325/desolation"></a> marked player. Minimum 3 players need to help soak, but more is better'
                         ],
                     ],
                     'healer' => [
@@ -883,63 +886,89 @@ class BossController extends Controller
                     'tank' => [
                         'PHASE 1',
                         'notes' => [
-                            'Coming Soon...',
-                            'Coming Soon...',
-                            'Coming Soon...',
-                            'Coming Soon...'
+                            'Keep Sanity above 0! Go back to <a class="text-mechanic" href="https://www.wowhead.com/npc=163397/wrathion"></a> (with extra action button or running to his circle) if you need to regain sanity',
+                            'Taunt when <a class="text-mechanic" href="https://www.wowhead.com/spell=315954/black-scar"></a> debuff drops, usually after 2 <a class="text-mechanic" href="https://www.wowhead.com/spell=315947/mandible-slam"></a> casts',
+                            '<a class="text-mechanic" href="https://www.wowhead.com/spell=313322/fragment-of-sanity"></a> can be gained breaking through <a class="text-mechanic" href="https://www.wowhead.com/spell=316847/adaptive-membrane"></a> on boss or adds',
+                            'Avoid <a class="text-mechanic" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> slam location',
+                            'Help CC and kill <a class="text-mechanic" href="https://www.wowhead.com/spell=307042/adaptive-antigen"></a> after <a class="text-mechanic" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> is gone'
                         ],
                     ],
                     'dps' => [
                         'PHASE 1',
                         'notes' => [
-                            'Coming Soon...',
-                            'Coming Soon...',
-                            'Coming Soon...',
-                            'Coming Soon...'
+                            'Keep Sanity above 0! Go back to <a class="text-mechanic" href="https://www.wowhead.com/npc=163397/wrathion"></a> (with extra action button or running to his circle) if you need to regain sanity',
+                            'If a player becomes a Servants of N\'zoth, be sure to interrupt and kill them as soon as possible',
+                            'Spread 10+ yards from other raiders when you get <a class="text-mechanic" href="https://www.wowhead.com/spell=306973/madness-bomb"></a>',
+                            '<a class="text-mechanic" href="https://www.wowhead.com/spell=313322/fragment-of-sanity"></a> can be gained breaking through <a class="text-mechanic" href="https://www.wowhead.com/spell=316847/adaptive-membrane"></a> on boss or adds',
+                            'Avoid <a class="text-mechanic" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> slam location. Once down, climb up and kill <a class="text-mechanic" href="https://www.wowhead.com/spell=307306/horrific-hemorrhage"></a>',
+                            'CC and kill <a class="text-mechanic" href="https://www.wowhead.com/spell=307042/adaptive-antigen"></a> after <a class="text-mechanic" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> is gone'
                         ],
                     ],
                     'healer' => [
                         'PHASE 1',
                         'notes' => [
-                            'Coming Soon...',
-                            'Coming Soon...',
-                            'Coming Soon...',
-                            'Coming Soon...'
+                            'Keep Sanity above 0! Go back to <a class="text-mechanic" href="https://www.wowhead.com/npc=163397/wrathion"></a> (with extra action button or running to his circle) if you need to regain sanity',
+                            'Spread 10+ yards away from allies when afflicted with <a class="text-mechanic" href="https://www.wowhead.com/spell=306973/madness-bomb"></a>',
+                            '<a class="text-mechanic" href="https://www.wowhead.com/spell=313322/fragment-of-sanity"></a> can be gained breaking through <a class="text-mechanic" href="https://www.wowhead.com/spell=316847/adaptive-membrane"></a> on boss or adds',
+                            'Avoid <a class="text-mechanic" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> slam location'
                         ],
                     ],
                 ];
                 $phaseTwo = [
                     'tank' => [
                         'PHASE 2',
-                        'notes' => [],
+                        'notes' => [
+                            'Clear <a class="text-mechanic" href="https://www.wowhead.com/npc=157461/mycelial-cyst"></a> (similar to g\'huun cysts) to get to and kill <a class="text-mechanic" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a>',
+                            'Once <a class="text-mechanic" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a> are gone, use extra action button to go to other side',
+                            'Watch out for <a class="text-mechanic" href="https://www.wowhead.com/spell=307092/occipital-blast"></a>',
+                            'Reset sanity before phase 3 by visiting <a class="text-mechanic" href="https://www.wowhead.com/npc=163397/wrathion"></a> one last time'
+                        ],
                     ],
                     'dps' => [
                         'PHASE 2',
-                        'notes' => [],
+                        'notes' => [
+                            'Clear <a class="text-mechanic" href="https://www.wowhead.com/npc=157461/mycelial-cyst"></a> (similar to g\'huun cysts) to get to and kill <a class="text-mechanic" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a>',
+                            'Once <a class="text-mechanic" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a> are gone, use extra action button to go to other side',
+                            'Watch out for <a class="text-mechanic" href="https://www.wowhead.com/spell=307092/occipital-blast"></a>',
+                            'Reset sanity before phase 3 by visiting <a class="text-mechanic" href="https://www.wowhead.com/npc=163397/wrathion"></a> one last time'
+                        ],
                     ],
                     'healer' => [
                         'PHASE 2',
-                        'notes' => [],
+                        'notes' => [
+                            'Clear <a class="text-mechanic" href="https://www.wowhead.com/npc=157461/mycelial-cyst"></a> (similar to g\'huun cysts) to get to and kill <a class="text-mechanic" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a>',
+                            'Once <a class="text-mechanic" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a> are gone, use extra action button to go to other side',
+                            'Watch out for <a class="text-mechanic" href="https://www.wowhead.com/spell=307092/occipital-blast"></a>',
+                            'The boss will cast <a class="text-mechanic" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>, watch raid health',
+                            'Reset sanity before phase 3 by visiting <a class="text-mechanic" href="https://www.wowhead.com/npc=163397/wrathion"></a> one last time'
+                        ],
                     ],
                 ];
                 $phaseThree = [
                     'tank' => [
                         'PHASE 3',
-                        'notes' => [],
+                        'notes' => [
+                            'Continue dodging <a class="text-mechanic" href="https://www.wowhead.com/spell=315820/thrashing-tentacle"></a>, they will happen a lot more during this phase!',
+                            'Everyone will be targeted by <a class="text-mechanic" href="https://www.wowhead.com/spell=306984/insanity-bomb"></a>, make sure to spread out',
+                        ],
                     ],
                     'dps' => [
                         'PHASE 3',
-                        'notes' => [],
+                        'notes' => [
+                            'Continue dodging <a class="text-mechanic" href="https://www.wowhead.com/spell=315820/thrashing-tentacle"></a>, they will happen a lot more during this phase!',
+                            'Everyone will be targeted by <a class="text-mechanic" href="https://www.wowhead.com/spell=306984/insanity-bomb"></a>, make sure to spread out',
+                            'Only kill <a class="text-mechanic" href="https://www.wowhead.com/npc=157452/nightmare-antigen"></a> when they get buffed by <a class="text-mechanic" href="https://www.wowhead.com/spell=316847/adaptive-membrane"></a>',
+                        ],
                     ],
                     'healer' => [
                         'PHASE 3',
-                        'notes' => [],
+                        'notes' => [
+                            'Continue dodging <a class="text-mechanic" href="https://www.wowhead.com/spell=315820/thrashing-tentacle"></a>, they will happen a lot more during this phase!',
+                            'Everyone will be targeted by <a class="text-mechanic" href="https://www.wowhead.com/spell=306984/insanity-bomb"></a>, make sure to spread out',
+                        ],
                     ],
                 ];
                 $mythic = [
-                    'Coming Soon...',
-                    'Coming Soon...',
-                    'Coming Soon...',
                     'Coming Soon...'
                 ];
             }
