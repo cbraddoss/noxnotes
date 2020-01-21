@@ -128,6 +128,20 @@ class BossController extends Controller
                         ],
                     ],
                 ];
+                $phaseThree = [
+                    'tank' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'dps' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'healer' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                ];
                 $mythic = [
                     'Watch <a class="text-mechanic" href="https://ptr.wowhead.com/spell=313250/creeping-madness"></a> debuff (it stacks!). You can try to drop it by not moving for 45 seconds. Debuff can be removed also (freedom, etc)',
                     '<a class="text-mechanic" href="https://ptr.wowhead.com/spell=307013/burning-madness"></a> only removes the <a class="text-mechanic" href="https://ptr.wowhead.com/spell=313175/hardened-core"></a> debuff, all pillars must be dpsed down now',
@@ -194,6 +208,20 @@ class BossController extends Controller
                         ],
                     ],
                 ];
+                $phaseThree = [
+                    'tank' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'dps' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'healer' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                ];
                 $mythic = [
                     'Ancient Curse (may have to run into the devoured abyss prior to this finishing casting TBD)',
                     'Plan on dipping in void zones to dispel, manual dispels on tanks + some melee'
@@ -257,6 +285,20 @@ class BossController extends Controller
                         ],
                     ],
                 ];
+                $phaseThree = [
+                    'tank' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'dps' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'healer' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                ];
                 $mythic = [
                     'Everyone is assigned either <a class="text-mechanic" href="https://www.wowhead.com/spell=307785/twisted-mind"></a> or <a class="text-mechanic" href="https://www.wowhead.com/spell=307784/clouded-mind"></a> debuffs',
                     'Players can only see adds related to their respective debuffs',
@@ -272,7 +314,7 @@ class BossController extends Controller
                 $assignments = [
                     'tank' => 'Mark tanks',
                     'dps' => 'Assign soccer player rotations, groups of 3 (Heroic only. mythic everyone helps) for <a class="text-mechanic" href="https://www.wowhead.com/spell=312336/void-ritual"></a>',
-                    'healer' => '---'
+                    'healer' => ''
                 ];
                 $phaseOne = [
                     'tank' => [
@@ -318,6 +360,20 @@ class BossController extends Controller
                         'notes' => [],
                     ],
                 ];
+                $phaseThree = [
+                    'tank' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'dps' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'healer' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                ];
                 $mythic = [
                     '<a class="text-mechanic" href="https://www.wowhead.com/spell=313198/void-touched"></a> debuff is now permanent after controlling the orb with <a class="text-mechanic" href="https://www.wowhead.com/spell=312406/voidwoken"></a>',
                     '<a class="text-mechanic" href="https://www.wowhead.com/spell=314298/imminent-doom"></a> will instantly kill after touching the orb 3 times (down from 5 on heroic)',
@@ -334,7 +390,7 @@ class BossController extends Controller
                 $assignments = [
                     'tank' => 'Mark tanks',
                     'dps' => 'Assign 2 person interrupts for <a class="text-mechanic" href="https://www.wowhead.com/spell=313652/mind-numbing-nova"></a> (from <a class="text-mechanic" href="https://www.wowhead.com/npc=157253/kazir"></a>)',
-                    'healer' => '---'
+                    'healer' => ''
                 ];
                 $phaseOne = [
                     'tank' => [
@@ -387,6 +443,20 @@ class BossController extends Controller
                         ],
                     ],
                 ];
+                $phaseThree = [
+                    'tank' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'dps' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'healer' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                ];
                 $mythic = [
                     '<a class="text-mechanic" href="https://www.wowhead.com/spell=310402/devouring-frenzy"></a> deals 5% more damage from heroic version',
                     '<a class="text-mechanic" href="https://www.wowhead.com/spell=313441/spawn-acidic-aqir"></a> occurs, eggs will seep pools of acid before hatching',
@@ -399,8 +469,8 @@ class BossController extends Controller
             // shadhar
             if($boss == 'shad-har') {
                 $assignments = [
-                    'tank' => '---',
-                    'dps' => '---',
+                    'tank' => '',
+                    'dps' => '',
                     'healer' => 'Assign spot healer?'
                 ];
                 $phaseOne = [
@@ -433,6 +503,25 @@ class BossController extends Controller
                 ];
                 $phaseTwo = [
                     'tank' => [
+                        'PHASE 2',
+                        'notes' => [],
+                    ],
+                    'dps' => [
+                        'PHASE 2',
+                        'notes' => [
+                            'Stand in mid range or behind boss to be able to dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=306930/entropic-breath"></a>',
+                            'Soak <a class="text-mechanic" href="https://www.wowhead.com/spell=308177/entropic-buildup"></a>, do not go over 4 stacks. Rotate multiple people in if needed',
+                        ],
+                    ],
+                    'healer' => [
+                        'PHASE 2',
+                        'notes' => [
+                            'Spot heal <a class="text-mechanic" href="https://www.wowhead.com/spell=307358/debilitating-spit"></a>, first person may need to use a personal or external to help with damage'
+                        ],
+                    ],
+                ];
+                $phaseThree = [
+                    'tank' => [
                         'PHASE 3',
                         'notes' => [
                             'Move boss around outer edge of the room as pools of goop spawn',
@@ -440,18 +529,15 @@ class BossController extends Controller
                         ],
                     ],
                     'dps' => [
-                        'PHASE 2 & 3',
+                        'PHASE 3',
                         'notes' => [
-                            'Stand in mid range or behind boss to be able to dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=306930/entropic-breath"></a>',
-                            'Soak <a class="text-mechanic" href="https://www.wowhead.com/spell=308177/entropic-buildup"></a>, do not go over 4 stacks. Rotate multiple people in if needed',
-                            'Phase 3: Move along edge of room with tanks (follow behind) to drop <a class="text-mechanic" href="https://www.wowhead.com/spell=314736/bubbling-overflow"></a> in good spots'
+                            'Move along edge of room with tanks (follow behind) to drop <a class="text-mechanic" href="https://www.wowhead.com/spell=314736/bubbling-overflow"></a> in good spots'
                         ],
                     ],
                     'healer' => [
-                        'PHASE 2& 3',
+                        'PHASE 3',
                         'notes' => [
-                            'Spot heal <a class="text-mechanic" href="https://www.wowhead.com/spell=307358/debilitating-spit"></a>, first person may need to use a personal or external to help with damage',
-                            'Phase 3: Move along edge of room with tanks (follow behind) to drop <a class="text-mechanic" href="https://www.wowhead.com/spell=314736/bubbling-overflow"></a> in good spots'
+                            'Move along edge of room with tanks (follow behind) to drop <a class="text-mechanic" href="https://www.wowhead.com/spell=314736/bubbling-overflow"></a> in good spots'
                         ],
                     ],
                 ];
@@ -467,8 +553,8 @@ class BossController extends Controller
             if($boss == 'drest-agath') {
                 $assignments = [
                     'tank' => 'Mark Tanks',
-                    'dps' => '---',
-                    'healer' => '---'
+                    'dps' => '',
+                    'healer' => ''
                 ];
                 $phaseOne = [
                     'tank' => [
@@ -523,6 +609,20 @@ class BossController extends Controller
                         'notes' => [],
                     ],
                 ];
+                $phaseThree = [
+                    'tank' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'dps' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'healer' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                ];
                 $mythic = [
                     '<a class="text-mechanic" href="https://ptr.wowhead.com/spell=315712/throes-of-dismemberment"></a> is active',
                     'When an appendage dies, it causes all appendages of the same type to cast their Agony Ability',
@@ -535,8 +635,8 @@ class BossController extends Controller
             if($boss == 'vexiona') {
                 $assignments = [
                     'tank' => 'Set initial Diamond Markers for void drops',
-                    'dps' => '---',
-                    'healer' => '---'
+                    'dps' => '',
+                    'healer' => ''
                 ];
                 $phaseOne = [
                     'tank' => [
@@ -570,8 +670,6 @@ class BossController extends Controller
                         'PHASE 2',
                         'notes' => [
                             'Dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=307218/twilight-decimator"></a> when boss swoops across room',
-                            '.',
-                            'Phase 3: Stay within 6 yards of another player to avoid the haste reduction from <a class="text-mechanic" href="https://www.wowhead.com/spell=307284/terrifying-presence"></a>'
                         ],
                     ],
                     'dps' => [
@@ -580,9 +678,6 @@ class BossController extends Controller
                             'Dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=307218/twilight-decimator"></a> when boss swoops across room',
                             'Continue to interrupt and kill Cultist adds',
                             'Continue to place <a class="text-mechanic" href="https://www.wowhead.com/spell=307343/shadowy-residue"></a> pools in low traffic areas',
-                            '.',
-                            'Phase 3: Stay within 6 yards of another player to avoid the haste reduction from <a class="text-mechanic" href="https://www.wowhead.com/spell=307284/terrifying-presence"></a>',
-                            'Phase 3: Run away from the boss 20 yards during <a class="text-mechanic" href="https://www.wowhead.com/spell=307639/heart-of-darkness"></a>'
                         ],
                     ],
                     'healer' => [
@@ -590,8 +685,27 @@ class BossController extends Controller
                         'notes' => [
                             'Dodge <a class="text-mechanic" href="https://www.wowhead.com/spell=307218/twilight-decimator"></a> when boss swoops across room',
                             'Continue to place <a class="text-mechanic" href="https://www.wowhead.com/spell=307343/shadowy-residue"></a> pools in low traffic areas',
-                            '.',
-                            'Phase 3: Stay within 6 yards of another player to avoid the haste reduction from <a class="text-mechanic" href="https://www.wowhead.com/spell=307284/terrifying-presence"></a>'
+                        ],
+                    ],
+                ];
+                $phaseThree = [
+                    'tank' => [
+                        'PHASE 3',
+                        'notes' => [
+                            'Stay within 6 yards of another player to avoid the haste reduction from <a class="text-mechanic" href="https://www.wowhead.com/spell=307284/terrifying-presence"></a>'
+                        ],
+                    ],
+                    'dps' => [
+                        'PHASE 3',
+                        'notes' => [
+                            'Stay within 6 yards of another player to avoid the haste reduction from <a class="text-mechanic" href="https://www.wowhead.com/spell=307284/terrifying-presence"></a>',
+                            'Run away from the boss 20 yards during <a class="text-mechanic" href="https://www.wowhead.com/spell=307639/heart-of-darkness"></a>'
+                        ],
+                    ],
+                    'healer' => [
+                        'PHASE 3',
+                        'notes' => [
+                            'Stay within 6 yards of another player to avoid the haste reduction from <a class="text-mechanic" href="https://www.wowhead.com/spell=307284/terrifying-presence"></a>'
                         ],
                     ],
                 ];
@@ -604,9 +718,9 @@ class BossController extends Controller
             // ilgynoth
             if($boss == 'il-gynoth') {
                 $assignments = [
-                    'tank' => '---',
-                    'dps' => '---',
-                    'healer' => '---'
+                    'tank' => '',
+                    'dps' => '',
+                    'healer' => ''
                 ];
                 $phaseOne = [
                     'tank' => [
@@ -654,6 +768,20 @@ class BossController extends Controller
                         ],
                     ],
                 ];
+                $phaseThree = [
+                    'tank' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'dps' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'healer' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                ];
                 $mythic = [
                     'Coming Soon...'
                 ];
@@ -664,8 +792,8 @@ class BossController extends Controller
             if($boss == 'ra-den') {
                 $assignments = [
                     'tank' => 'Set markers around room',
-                    'dps' => '---',
-                    'healer' => '---'
+                    'dps' => '',
+                    'healer' => ''
                 ];
                 $phaseOne = [
                     'tank' => [
@@ -724,6 +852,20 @@ class BossController extends Controller
                         ],
                     ],
                 ];
+                $phaseThree = [
+                    'tank' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'dps' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'healer' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                ];
                 $mythic = [
                     'Coming Soon...'
                 ];
@@ -733,9 +875,9 @@ class BossController extends Controller
             // carapace
             if($boss == 'carapace') {
                 $assignments = [
-                    'tank' => '---',
-                    'dps' => '---',
-                    'healer' => '---'
+                    'tank' => '',
+                    'dps' => '',
+                    'healer' => ''
                 ];
                 $phaseOne = [
                     'tank' => [
@@ -777,6 +919,20 @@ class BossController extends Controller
                     ],
                     'healer' => [
                         'PHASE 2',
+                        'notes' => [],
+                    ],
+                ];
+                $phaseThree = [
+                    'tank' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'dps' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'healer' => [
+                        'PHASE 3',
                         'notes' => [],
                     ],
                 ];
@@ -792,9 +948,9 @@ class BossController extends Controller
             // nzoth
             if($boss == 'n-zoth') {
                 $assignments = [
-                    'tank' => '---',
-                    'dps' => '---',
-                    'healer' => '---'
+                    'tank' => '',
+                    'dps' => '',
+                    'healer' => ''
                 ];
                 $phaseOne = [
                     'tank' => [
@@ -839,6 +995,20 @@ class BossController extends Controller
                         'notes' => [],
                     ],
                 ];
+                $phaseThree = [
+                    'tank' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'dps' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                    'healer' => [
+                        'PHASE 3',
+                        'notes' => [],
+                    ],
+                ];
                 $mythic = [
                     'Coming Soon...',
                     'Coming Soon...',
@@ -847,7 +1017,7 @@ class BossController extends Controller
                 ];
             }
 
-            return view('boss', compact('boss', 'role', 'assignments', 'phaseOne', 'phaseTwo', 'mythic'));
+            return view('boss', compact('boss', 'role', 'assignments', 'phaseOne', 'phaseTwo', 'phaseThree', 'mythic'));
         }
 
         abort(404);

@@ -24,6 +24,10 @@
 <div class="flex-center position-relative bosses">
     <a id="boss1"></a>
     <div class="container bg-secondary">
+
+
+        <h1 class="display-5 text-light boss-title">@if($boss == 'ra-den') {{ ucfirst($boss) }} @else {{ ucfirst(str_replace('-', '\'', $boss)) }} @endif @if($role == 'dps') {{ strtoupper($role) }} @else {{ ucfirst($role) }} @endif Notes</h1>
+
         <div class="boss-map-container float-right">
             <div class="collapse multi-collapse boss-map-big-container" id="multiCollapseExample1">
                 <div class="card card-body">
@@ -33,17 +37,15 @@
 
         </div>
 
-        <h1 class="display-5 text-light">@if($boss == 'ra-den') {{ ucfirst($boss) }} @else {{ ucfirst(str_replace('-', '\'', $boss)) }} @endif @if($role == 'dps') {{ strtoupper($role) }} @else {{ ucfirst($role) }} @endif Notes</h1>
-
-
-
         <div class="tab-content" id="myTabContent">
 
             @if($role == 'dps')
             <div class="tab-pane fade show active" id="dps" role="tabpanel" aria-labelledby="dps-tab">
                 <div class="card bg-secondary text-light">
                     <div class="card-body">
+                        @if(!empty($assignments['dps']))
                         <h6 class="card-subtitle mb-2 card-duty text-dark">{!! $assignments['dps'] !!}</h6>
+                        @endif
                         <ul class="list-group list-group-flush bg-dark text-light">
                             <li class="list-group-item card-phase text-dark">{!! $phaseOne['dps'][0] !!}</li>
                             @foreach($phaseOne['dps']['notes'] as $dpsNotesOne)
@@ -58,6 +60,14 @@
                             @endforeach
                         </ul>
                         @endif
+                        @if(!empty($phaseThree['dps']['notes']))
+                        <ul class="list-group list-group-flush bg-dark text-light">
+                            <li class="list-group-item card-phase text-dark">{!! $phaseThree['dps'][0] !!}</li>
+                            @foreach($phaseThree['dps']['notes'] as $dpsNotesThree)
+                            <li class="list-group-item bg-dark text-light">{!! $dpsNotesThree !!}</li>
+                            @endforeach
+                        </ul>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -67,7 +77,9 @@
             <div class="tab-pane fade show active" id="tank" role="tabpanel" aria-labelledby="tank-tab">
                 <div class="card bg-secondary text-light">
                     <div class="card-body spec-cards">
+                        @if(!empty($assignments['tank']))
                         <h6 class="card-subtitle mb-2 card-duty text-dark">{!! $assignments['tank'] !!}</h6>
+                        @endif
                         <ul class="list-group list-group-flush bg-dark text-light">
                             <li class="list-group-item card-phase text-dark">{!! $phaseOne['tank'][0] !!}</li>
                             @foreach($phaseOne['tank']['notes'] as $tankNotesOne)
@@ -82,6 +94,14 @@
                             @endforeach
                         </ul>
                         @endif
+                        @if(!empty($phaseThree['tank']['notes']))
+                        <ul class="list-group list-group-flush bg-dark text-light">
+                            <li class="list-group-item card-phase text-dark">{!! $phaseThree['tank'][0] !!}</li>
+                            @foreach($phaseThree['tank']['notes'] as $tankNotesThree)
+                            <li class="list-group-item bg-dark text-light">{!! $tankNotesThree !!}</li>
+                            @endforeach
+                        </ul>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -91,7 +111,9 @@
             <div class="tab-pane fade show active" id="healer" role="tabpanel" aria-labelledby="healer-tab">
                 <div class="card bg-secondary text-light">
                     <div class="card-body">
+                        @if(!empty($assignments['healer']))
                         <h6 class="card-subtitle mb-2 card-duty text-dark">{!! $assignments['healer'] !!}</h6>
+                        @endif
                         <ul class="list-group list-group-flush bg-dark text-light">
                             <li class="list-group-item card-phase text-dark">{!! $phaseOne['healer'][0] !!}</li>
                             @foreach($phaseOne['healer']['notes'] as $healerNotesOne)
@@ -103,6 +125,14 @@
                             <li class="list-group-item card-phase text-dark">{!! $phaseTwo['healer'][0] !!}</li>
                             @foreach($phaseTwo['healer']['notes'] as $healerNotesTwo)
                             <li class="list-group-item bg-dark text-light">{!! $healerNotesTwo !!}</li>
+                            @endforeach
+                        </ul>
+                        @endif
+                        @if(!empty($phaseThree['healer']['notes']))
+                        <ul class="list-group list-group-flush bg-dark text-light">
+                            <li class="list-group-item card-phase text-dark">{!! $phaseThree['healer'][0] !!}</li>
+                            @foreach($phaseThree['healer']['notes'] as $healerNotesThree)
+                            <li class="list-group-item bg-dark text-light">{!! $healerNotesThree !!}</li>
                             @endforeach
                         </ul>
                         @endif

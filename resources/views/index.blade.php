@@ -8,7 +8,7 @@
         <title>Nox Notes for Ny'alotha, the Waking City | Nox Guild | US Zul'jin</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" type="text/css" href="fonts/proto-sans/proto-sans.css"/>
+        <link rel="stylesheet" type="text/css" href="/fonts/proto-sans/proto-sans.css"/>
 
         <!-- Styles -->
         <link href="/css/app.css" rel="stylesheet" type="text/css">

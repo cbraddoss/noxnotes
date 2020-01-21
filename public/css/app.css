@@ -37,8 +37,12 @@ h1,h2,h3,h4,h5 {
     cursor: pointer;
 }
 .boss-map-big-container .boss-map-big {
-    margin: 60px 10px 0px;
+    margin: -.3rem 10px 0px;
     border-radius: 5px;
+    max-width: 100%;
+}
+.boss-title {
+    clear: right;
 }
 .raid-title {
     margin-top: 75px;
@@ -70,7 +74,7 @@ h1,h2,h3,h4,h5 {
     color: #bfbfbf!important;
     margin-right: 5px;
     border-color: #212121;
-    background-color: #303030!important;
+    background-color: rgba(48,48,48,0.6) !important;
     border-top-right-radius: .25rem;
 }
 .boss-tabs .nav-tabs a.active, .boss-tabs .nav-tabs a:hover {
@@ -94,6 +98,7 @@ h1,h2,h3,h4,h5 {
 .bosses .card {
     border: none;
     border-radius: 0;
+    min-width: 30%;
 }
 .bosses .card-body {
     padding: 1.25rem 0;
