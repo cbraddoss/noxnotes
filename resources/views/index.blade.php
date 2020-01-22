@@ -44,7 +44,7 @@
                     </ul>
                     <ul class="navbar-nav justify-content-end">
                         <li class="nav-item">
-                            <a class="nav-link " href="https://noxguild.us">noxguild.us</a>
+                            <a class="nav-link" target="_blank" href="https://noxguild.us">noxguild.us</a>
                         </li>
                     </ul>
                 </div>
