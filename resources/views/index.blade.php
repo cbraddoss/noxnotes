@@ -33,7 +33,7 @@
         <header>
             <nav class="navbar navbar-expand-sm navbar-dark bg-secondary fixed-top bg-nwc">
                 <a class="navbar-brand" href="/">
-                    <img src="https://s3.amazonaws.com/noxguild/notes/nox-notes-logo-no-bg.png" alt="NWC Logo">
+                    <img src="https://s3.amazonaws.com/noxguild/notes/nox-notes-logo-no-bg.png" alt="Castle Nathria Notes Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -51,7 +51,7 @@
             </nav>
         </header>
         <div class="container raid-title">
-            <h1 class="text-center text-light">Ny'alotha, the Waking City</h1>
+            <h1 class="text-center text-light">Castle Nathria</h1>
         </div>
         <nav class="boss-nav navbar navbar-expand">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
