@@ -47,21 +47,11 @@ h1,h2,h3,h4,h5 {
 .raid-title {
     margin-top: 75px;
 }
-.boss-nav li {
-}
-.boss-nav li .boss-icon {
-}
 .boss-nav li img {
     border-radius: 5px;
 }
-.boss-nav li {
-}
 .boss-nav li.active img, .boss-nav li:hover img {
     box-shadow: 0px 0px 5px 4px rgba(255,255,255,0.4);
-}
-.boss-nav li a.active, .boss-nav li a:hover {
-}
-.boss-nav li span {
 }
 .boss-tabs {
     position: relative;

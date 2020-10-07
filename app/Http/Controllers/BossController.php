@@ -71,9 +71,16 @@ class BossController extends Controller
             // Wrathion
             if($boss == 'shriekwing') {
                 $assignments = [
-                    'tank' => 'Set markers around the room',
-                    'dps' => '<a class="text-mechanic" target="_blank" href="https://ptr.wowhead.com/spell=308682/scales-of-wrathion"></a>',
+                    'tank' => '',
+                    'dps' => '',
                     'healer' => ''
+                ];
+                $quick_notes = [
+                    'Everyone should hide behind same pillar during [Earsplitting Shriek]',
+                    'If marked with [Echolocation], move to the edge of the room',
+                    'Tanks use mitigation for [Exsanguinating Bite], taunt swap after each cast',
+                    'Healers watch for [Reverberating Scream]',
+                    '[Echoing Screech] should be faced toward an open area, everyone make sure to dodge sonic rings'
                 ];
                 $phaseOne = [
                     'tank' => [
@@ -123,9 +130,19 @@ class BossController extends Controller
             // Maut
             if($boss == 'huntsman-altimor') {
                 $assignments = [
-                    'tank' => 'Set Diamond Marker for first void zone drops',
-                    'dps' => 'Mark somebody or right on  back of boss for phase 2 stack',
-                    'healer' => 'Stand with ranged or melee'
+                    'tank' => '',
+                    'dps' => '',
+                    'healer' => ''
+                ];
+                $quick_notes = [
+                    'Huntsman Alitmor: spread loosely and watch for [Spreadshot] and [Sinseeker]',
+                    'Margor: tanks taunt after 2-4 stacks of [Jagged Claws] and everyone stack on target of [Vicious Lunge]',
+                    'Bargast: tank call for externals or use cds for [Rip Soul] and healers help heal it before it reaches boss',
+                    'Hercutis: Healers keep cds ready for [Crushing Stone], everyone should place these on the edges of the room',
+                    '',
+                    '',
+                    '',
+                    '',
                 ];
                 $phaseOne = [
                     'tank' => [
@@ -175,9 +192,9 @@ class BossController extends Controller
             // skitra
             if($boss == 'hungering-destroyer') {
                 $assignments = [
-                    'tank' => 'One tank sets markers for phase 2 on each add and we match the other side',
-                    'dps' => 'Stack with group',
-                    'healer' => 'Stack with group'
+                    'tank' => '',
+                    'dps' => '',
+                    'healer' => ''
                 ];
                 $phaseOne = [
                     'tank' => [
