@@ -13,7 +13,7 @@ class BossController extends Controller
      */
     public function index()
     {
-        return redirect('/wrathion/dps');
+        return redirect('/shriekwing/dps');
     }
 
     /**
@@ -24,18 +24,16 @@ class BossController extends Controller
     public function boss(Request $request)
     {
         $bosses = [
-            'wrathion',
-            'maut',
-            'skitra',
-            'inquisitor',
-            'hivemind',
-            'shad-har',
-            'drest-agath',
-            'il-gynoth',
-            'vexiona',
-            'ra-den',
-            'carapace',
-            'n-zoth',
+            'shriekwing',
+            'huntsman-altimor',
+            'hungering-destroyer',
+            'artificer-xymox',
+            'sun-kings-salvation',
+            'lady-inerva-darkvein',
+            'council-of-blood',
+            'sludgefist',
+            'stone-legion-generals',
+            'sire-denathrius',
         ];
 
         if(in_array($request['boss'], $bosses)) {
@@ -53,18 +51,16 @@ class BossController extends Controller
     public function bosses(Request $request)
     {
         $bosses = [
-            'wrathion',
-            'maut',
-            'skitra',
-            'inquisitor',
-            'hivemind',
-            'shad-har',
-            'drest-agath',
-            'il-gynoth',
-            'vexiona',
-            'ra-den',
-            'carapace',
-            'n-zoth',
+            'shriekwing',
+            'huntsman-altimor',
+            'hungering-destroyer',
+            'artificer-xymox',
+            'sun-kings-salvation',
+            'lady-inerva-darkvein',
+            'council-of-blood',
+            'sludgefist',
+            'stone-legion-generals',
+            'sire-denathrius',
         ];
 
         if(in_array($request['boss'], $bosses)) {
@@ -73,10 +69,10 @@ class BossController extends Controller
             $role = $request['role'];
 
             // Wrathion
-            if($boss == 'wrathion') {
+            if($boss == 'shriekwing') {
                 $assignments = [
                     'tank' => 'Set markers around the room',
-                    'dps' => 'Assign soakers for <a class="text-mechanic" target="_blank" href="https://ptr.wowhead.com/spell=308682/scales-of-wrathion"></a>',
+                    'dps' => '<a class="text-mechanic" target="_blank" href="https://ptr.wowhead.com/spell=308682/scales-of-wrathion"></a>',
                     'healer' => ''
                 ];
                 $phaseOne = [
@@ -150,7 +146,7 @@ class BossController extends Controller
             }
 
             // Maut
-            if($boss == 'maut') {
+            if($boss == 'huntsman-altimor') {
                 $assignments = [
                     'tank' => 'Set Diamond Marker for first void zone drops',
                     'dps' => 'Mark somebody or right on  back of boss for phase 2 stack',
@@ -232,7 +228,7 @@ class BossController extends Controller
             }
 
             // skitra
-            if($boss == 'skitra') {
+            if($boss == 'hungering-destroyer') {
                 $assignments = [
                     'tank' => 'One tank sets markers for phase 2 on each add and we match the other side',
                     'dps' => 'Stack with group',
@@ -313,7 +309,7 @@ class BossController extends Controller
             }
 
             // inquisitor
-            if($boss == 'inquisitor') {
+            if($boss == 'artificer-xymox') {
                 $assignments = [
                     'tank' => 'Mark tanks',
                     'dps' => 'Assign soccer player rotations, groups of 3 (Heroic only. mythic everyone helps) for <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=312336/void-ritual"></a>',
@@ -387,9 +383,8 @@ class BossController extends Controller
                 ];
             }
 
-
             // hivemind
-            if($boss == 'hivemind') {
+            if($boss == 'sun-kings-salvation') {
                 $assignments = [
                     'tank' => 'Mark tanks',
                     'dps' => 'Assign 2 person interrupts for <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=313652/mind-numbing-nova"></a> (from <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=157253/kazir"></a>)',
@@ -468,9 +463,8 @@ class BossController extends Controller
                 ];
             }
 
-
             // shadhar
-            if($boss == 'shad-har') {
+            if($boss == 'lady-inerva-darkvein') {
                 $assignments = [
                     'tank' => '',
                     'dps' => '',
@@ -551,9 +545,8 @@ class BossController extends Controller
                 ];
             }
 
-
             // drestagath
-            if($boss == 'drest-agath') {
+            if($boss == 'council-of-blood') {
                 $assignments = [
                     'tank' => 'Mark Tanks',
                     'dps' => '',
@@ -633,9 +626,8 @@ class BossController extends Controller
                 ];
             }
 
-
             // vexiona
-            if($boss == 'vexiona') {
+            if($boss == 'sludgefist') {
                 $assignments = [
                     'tank' => 'Set initial Diamond Markers for void drops',
                     'dps' => '',
@@ -720,9 +712,8 @@ class BossController extends Controller
                 ];
             }
 
-
             // ilgynoth
-            if($boss == 'il-gynoth') {
+            if($boss == 'stone-legion-generals') {
                 $assignments = [
                     'tank' => '',
                     'dps' => '',
@@ -793,9 +784,8 @@ class BossController extends Controller
                 ];
             }
 
-
             // raden
-            if($boss == 'ra-den') {
+            if($boss == 'sire-denathrius') {
                 $assignments = [
                     'tank' => 'Set markers around room',
                     'dps' => '',
@@ -870,224 +860,6 @@ class BossController extends Controller
                     'healer' => [
                         'PHASE 3',
                         'notes' => [],
-                    ],
-                ];
-                $mythic = [
-                    'Coming Soon...'
-                ];
-            }
-
-
-            // carapace
-            if($boss == 'carapace') {
-                $assignments = [
-                    'tank' => '',
-                    'dps' => '',
-                    'healer' => ''
-                ];
-                $phaseOne = [
-                    'tank' => [
-                        'PHASE 1',
-                        'notes' => [
-                            'Keep Sanity above 0! Go back to <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=163397/wrathion"></a> (with extra action button or running to his circle) if you need to regain sanity',
-                            'Taunt when <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=315954/black-scar"></a> debuff drops, usually after 2 <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=315947/mandible-slam"></a> casts',
-                            '<a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=313322/fragment-of-sanity"></a> can be gained breaking through <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=316847/adaptive-membrane"></a> on boss or adds',
-                            'Avoid <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> slam location',
-                            'Help CC and kill <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307042/adaptive-antigen"></a> after <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> is gone',
-                            'Tank <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=162429/fury-of-nzoth"></a> near Gaze of Madness for cleave and extra damage (3% when Gaze dies)'
-                        ],
-                    ],
-                    'dps' => [
-                        'PHASE 1',
-                        'notes' => [
-                            'Keep Sanity above 0! Go back to <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=163397/wrathion"></a> (with extra action button or running to his circle) if you need to regain sanity',
-                            'If a player becomes a Servants of N\'zoth, be sure to interrupt and kill them as soon as possible',
-                            'Spread 10+ yards from other raiders when you get <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=306973/madness-bomb"></a>',
-                            '<a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=313322/fragment-of-sanity"></a> can be gained breaking through <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=316847/adaptive-membrane"></a> on boss or adds',
-                            'Avoid <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> slam location. Once down, climb up and kill <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307306/horrific-hemorrhage"></a>',
-                            'CC and kill <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307042/adaptive-antigen"></a> after <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> is gone',
-                            'Kill Gaze of Madness as soon as it spawns. Be careful not to interrupt to avoid extra sanity loss to the raid'
-                        ],
-                    ],
-                    'healer' => [
-                        'PHASE 1',
-                        'notes' => [
-                            'Keep Sanity above 0! Go back to <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=163397/wrathion"></a> (with extra action button or running to his circle) if you need to regain sanity',
-                            'Spread 10+ yards away from allies when afflicted with <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=306973/madness-bomb"></a>',
-                            '<a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=313322/fragment-of-sanity"></a> can be gained breaking through <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=316847/adaptive-membrane"></a> on boss or adds',
-                            'Avoid <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307131/growth-covered-tentacle"></a> slam location'
-                        ],
-                    ],
-                ];
-                $phaseTwo = [
-                    'tank' => [
-                        'PHASE 2',
-                        'notes' => [
-                            'Clear <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=157461/mycelial-cyst"></a> (similar to g\'huun cysts) to get to and kill <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a>',
-                            'Once <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a> are gone, use extra action button to go to other side',
-                            'Watch out for <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307092/occipital-blast"></a>',
-                            'Reset sanity before phase 3 by visiting <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=163397/wrathion"></a> one last time',
-                            'Watch out for <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317627/infinite-void"></a> spawned after <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>, move boss if needed'
-                        ],
-                    ],
-                    'dps' => [
-                        'PHASE 2',
-                        'notes' => [
-                            'Clear <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=157461/mycelial-cyst"></a> (similar to g\'huun cysts) to get to and kill <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a>',
-                            'Once <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a> are gone, use extra action button to go to other side',
-                            'Watch out for <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307092/occipital-blast"></a>',
-                            'Reset sanity before phase 3 by visiting <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=163397/wrathion"></a> one last time',
-                            'Watch out for <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317627/infinite-void"></a> spawned after <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>'
-                        ],
-                    ],
-                    'healer' => [
-                        'PHASE 2',
-                        'notes' => [
-                            'Clear <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=157461/mycelial-cyst"></a> (similar to g\'huun cysts) to get to and kill <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a>',
-                            'Once <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=157475/synthesis-growth"></a> are gone, use extra action button to go to other side',
-                            'Watch out for <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307092/occipital-blast"></a>',
-                            'The boss will cast <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>, watch raid health',
-                            'Reset sanity before phase 3 by visiting <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=163397/wrathion"></a> one last time',
-                            'Watch out for <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317627/infinite-void"></a> spawned after <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>'
-                        ],
-                    ],
-                ];
-                $phaseThree = [
-                    'tank' => [
-                        'PHASE 3',
-                        'notes' => [
-                            'Continue dodging <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=315820/thrashing-tentacle"></a>, they will happen a lot more during this phase!',
-                            'Everyone will be targeted by <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=306984/insanity-bomb"></a>, make sure to spread out',
-                            'Watch out for <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317627/infinite-void"></a> spawned after <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>, move boss if needed'
-                        ],
-                    ],
-                    'dps' => [
-                        'PHASE 3',
-                        'notes' => [
-                            'Continue dodging <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=315820/thrashing-tentacle"></a>, they will happen a lot more during this phase!',
-                            'Everyone will be targeted by <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=306984/insanity-bomb"></a>, make sure to spread out',
-                            'Only kill <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=157452/nightmare-antigen"></a> when they get buffed by <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=316847/adaptive-membrane"></a>',
-                            'Watch out for <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317627/infinite-void"></a> spawned after <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>'
-                        ],
-                    ],
-                    'healer' => [
-                        'PHASE 3',
-                        'notes' => [
-                            'Continue dodging <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=315820/thrashing-tentacle"></a>, they will happen a lot more during this phase!',
-                            'Everyone will be targeted by <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=306984/insanity-bomb"></a>, make sure to spread out',
-                            'Watch out for <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317627/infinite-void"></a> spawned after <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=307048/eternal-darkness"></a>'
-                        ],
-                    ],
-                ];
-                $mythic = [
-                    'Coming Soon...'
-                ];
-            }
-
-
-            // nzoth
-            if($boss == 'n-zoth') {
-                $assignments = [
-                    'tank' => '',
-                    'dps' => '',
-                    'healer' => ''
-                ];
-                $phaseOne = [
-                    'tank' => [
-                        'PHASE 1',
-                        'notes' => [
-                            'Don\'t let your sanity reach 0! Use your <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=316271/azeroths-radiance"></a> extra action button to regain Sanity',
-                            'Keep <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=158376/psychus"></a> near <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=159578/exposed-synapse"></a> to get the 50% damage increase from <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=313184/synaptic-shock"></a>',
-                            'Stay on edge of room so <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=309991/anguish"></a> drops in good locations',
-                            'Find your floating body when <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=158376/psychus"></a> dies before <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317292/collapsing-mindscape"></a> triggers'
-                        ],
-                    ],
-                    'dps' => [
-                        'PHASE 1',
-                        'notes' => [
-                            'Don\'t let your sanity reach 0! Use your <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=316271/azeroths-radiance"></a> extra action button to regain Sanity',
-                            'Focus on <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=159578/exposed-synapse"></a> until boss has 5 stacks of <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=313184/synaptic-shock"></a>',
-                            'Keep 5 yards apart to avoid extra damage from <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=309991/anguish"></a>',
-                            'Find your floating body when <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=158376/psychus"></a> dies before <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317292/collapsing-mindscape"></a> triggers',
-                            'Kill <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=158376/psychus"></a> before he gains full energy'
-                        ],
-                    ],
-                    'healer' => [
-                        'PHASE 1',
-                        'notes' => [
-                            'Don\'t let your sanity reach 0! Use your <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=316271/azeroths-radiance"></a> extra action button to regain Sanity',
-                            'Keep 5 yards apart to avoid extra damage from <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=309991/anguish"></a>',
-                            'Find your floating body when <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=158376/psychus"></a> dies before <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317292/collapsing-mindscape"></a> triggers'
-                        ],
-                    ],
-                ];
-                $phaseTwo = [
-                    'tank' => [
-                        'PHASE 2',
-                        'notes' => [
-                            'Clear a path to the wall by damaging <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=318896/corrupted-neuron"></a>',
-                            'Look at your arrow and either stand near boss or near edge of the room when <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=315772/mindgrasp"></a> is cast',
-                            'Find your <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=309980/paranoia"></a> partner!',
-                            'Tank Basher Tentacles',
-                            'Half the raid each time will need to go through the <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=309046/mindgate"></a>',
-                            'Dodge <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=313793/flames-of-insanity"></a> during first Mind Realm',
-                            'Avoid moving alot due to <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=315709/tread-lightly"></a> during second Mind Realm'
-                        ],
-                    ],
-                    'dps' => [
-                        'PHASE 2',
-                        'notes' => [
-                            'Damage the boss when it has <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=312155/shattered-ego"></a>',
-                            'Clear a path to the wall by damaging <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=318896/corrupted-neuron"></a>',
-                            'Look at your arrow and either stand near boss or near edge of the room when <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=315772/mindgrasp"></a> is cast',
-                            'Find your <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=309980/paranoia"></a> partner!',
-                            'Focus down Basher Tentacles first',
-                            'Interrupt <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=313400/corrupted-mind"></a>',
-                            '<a class="text-mechanic" target="_blank" href="https://www.wowhead.com/npc=160249/spike-tentacle"></a> are lowest priority (dot, cleave)',
-                            'Half the raid each time will need to go through the <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=309046/mindgate"></a> to the Mind Realm',
-                            'Dodge <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=313793/flames-of-insanity"></a> during first Mind Realm',
-                            'Avoid moving alot due to <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=315709/tread-lightly"></a> during second Mind Realm'
-                        ],
-                    ],
-                    'healer' => [
-                        'PHASE 2',
-                        'notes' => [
-                            'Clear a path to the wall by damaging <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=318896/corrupted-neuron"></a>',
-                            'Look at your arrow and either stand near boss or near edge of the room when <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=315772/mindgrasp"></a> is cast',
-                            'Find your <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=309980/paranoia"></a> partner!',
-                            'Dispel any <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=313400/corrupted-mind"></a>',
-                            'Half the raid each time will need to go through the <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=309046/mindgate"></a>',
-                            'Dodge <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=313793/flames-of-insanity"></a> during first Mind Realm',
-                            'Avoid moving alot due to <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=315709/tread-lightly"></a> during second Mind Realm'
-                        ],
-                    ],
-                ];
-                $phaseThree = [
-                    'tank' => [
-                        'PHASE 3',
-                        'notes' => [
-                            'Move raid around the room to help with <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=309991/anguish"></a> placement',
-                            'Avoid <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317874/stupefying-glare"></a>',
-                            '<a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317066/harvest-thoughts"></a> should be soaked by high sanity players'
-                        ],
-                    ],
-                    'dps' => [
-                        'PHASE 3',
-                        'notes' => [
-                            'Drop <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=309991/anguish"></a> to the side of the raid',
-                            'Keep dealing with <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=315772/mindgrasp"></a> and <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=309980/paranoia"></a>',
-                            'Avoid <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317874/stupefying-glare"></a>',
-                            '<a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317066/harvest-thoughts"></a> should be soaked by high sanity players',
-                            'Kill Thought Harvester asap!'
-                        ],
-                    ],
-                    'healer' => [
-                        'PHASE 3',
-                        'notes' => [
-                            'Drop <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=309991/anguish"></a> to the side of the raid',
-                            'Avoid <a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317874/stupefying-glare"></a>',
-                            '<a class="text-mechanic" target="_blank" href="https://www.wowhead.com/spell=317066/harvest-thoughts"></a> should be soaked by high sanity players'
-                        ],
                     ],
                 ];
                 $mythic = [
