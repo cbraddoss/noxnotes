@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>Nox Notes for Ny'alotha, the Waking City | Nox Guild | US Zul'jin</title>
+        <title>Castle Nathria Notes</title>
 
         <!-- Fonts -->
         <link rel="stylesheet" type="text/css" href="/fonts/proto-sans/proto-sans.css"/>
@@ -59,41 +59,35 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="nav mx-auto justify-content-center text-center text-light">
-                    <li class="nav-item @if($boss == 'wrathion') {{ 'active' }} @endif">
-                        <a class="nav-link @if($boss == 'wrathion') {{ 'active' }} @endif" href="/"><img src="https://s3.amazonaws.com/noxguild/notes/wrathion-icon.jpg" alt="Wrathion"></a><span>Wrathion</span>
+                    <li class="nav-item @if($boss == 'shriekwing') {{ 'active' }} @endif">
+                        <a class="nav-link @if($boss == 'shriekwing') {{ 'active' }} @endif" href="/"><img src="https://s3.amazonaws.com/noxguild/notes/shriekwing-icon.jpg" alt="shriekwing"></a><span>shriekwing</span>
                     </li>
-                    <li class="nav-item @if($boss == 'maut') {{ 'active' }} @endif">
-                        <a class="nav-link @if($boss == 'maut') {{ 'active' }} @endif" href="/maut"><img src="https://s3.amazonaws.com/noxguild/notes/maut-icon.jpg" alt="Maut"></a><span>Maut</span>
+                    <li class="nav-item @if($boss == 'huntsman-altimor') {{ 'active' }} @endif">
+                        <a class="nav-link @if($boss == 'huntsman-altimor') {{ 'active' }} @endif" href="/huntsman-altimor"><img src="https://s3.amazonaws.com/noxguild/notes/huntsman-altimor-icon.jpg" alt="huntsman-altimor"></a><span>huntsman-altimor</span>
                     </li>
-                    <li class="nav-item @if($boss == 'skitra') {{ 'active' }} @endif">
-                        <a class="nav-link @if($boss == 'skitra') {{ 'active' }} @endif" href="/skitra"><img src="https://s3.amazonaws.com/noxguild/notes/prophet-skitra-icon.jpg" alt="Prophet Skitra"></a><span>Skitra</span>
+                    <li class="nav-item @if($boss == 'hungering-destroyer') {{ 'active' }} @endif">
+                        <a class="nav-link @if($boss == 'hungering-destroyer') {{ 'active' }} @endif" href="/hungering-destroyer"><img src="https://s3.amazonaws.com/noxguild/notes/hungering-destroyer-icon.jpg" alt="hungering-destroyer"></a><span>hungering-destroyer</span>
                     </li>
-                    <li class="nav-item @if($boss == 'inquisitor') {{ 'active' }} @endif">
-                        <a class="nav-link @if($boss == 'inquisitor') {{ 'active' }} @endif" href="/inquisitor"><img src="https://s3.amazonaws.com/noxguild/notes/dark-inquisitor-icon.jpg" alt="Dark Inquisitor Xanesh"></a><span>Inquisitor</span>
+                    <li class="nav-item @if($boss == 'artificer-xymox') {{ 'active' }} @endif">
+                        <a class="nav-link @if($boss == 'artificer-xymox') {{ 'active' }} @endif" href="/artificer-xymox"><img src="https://s3.amazonaws.com/noxguild/notes/artificer-xymox-icon.jpg" alt="artificer-xymox"></a><span>artificer-xymox</span>
                     </li>
-                    <li class="nav-item @if($boss == 'hivemind') {{ 'active' }} @endif">
-                        <a class="nav-link @if($boss == 'hivemind') {{ 'active' }} @endif" href="/hivemind"><img src="https://s3.amazonaws.com/noxguild/notes/hivemind-icon.jpg" alt="Hivemind"></a><span>Hivemind</span>
+                    <li class="nav-item @if($boss == 'sun-kings-salvation') {{ 'active' }} @endif">
+                        <a class="nav-link @if($boss == 'sun-kings-salvation') {{ 'active' }} @endif" href="/sun-kings-salvation"><img src="https://s3.amazonaws.com/noxguild/notes/sun-kings-salvation-icon.jpg" alt="sun-kings-salvation"></a><span>sun-kings-salvation</span>
                     </li>
-                    <li class="nav-item @if($boss == 'shad-har') {{ 'active' }} @endif">
-                        <a class="nav-link @if($boss == 'shad-har') {{ 'active' }} @endif" href="/shad-har"><img src="https://s3.amazonaws.com/noxguild/notes/shadhar-icon.jpg" alt="Shad'har"></a><span>Shad'har</span>
+                    <li class="nav-item @if($boss == 'lady-inerva-darkvein') {{ 'active' }} @endif">
+                        <a class="nav-link @if($boss == 'lady-inerva-darkvein') {{ 'active' }} @endif" href="/lady-inerva-darkvein"><img src="https://s3.amazonaws.com/noxguild/notes/lady-inerva-darkvein-icon.jpg" alt="lady-inerva-darkvein"></a><span>lady-inerva-darkvein</span>
                     </li>
-                    <li class="nav-item @if($boss == 'drest-agath') {{ 'active' }} @endif">
-                        <a class="nav-link @if($boss == 'drest-agath') {{ 'active' }} @endif" href="/drest-agath"><img src="https://s3.amazonaws.com/noxguild/notes/drestagath-icon.jpg" alt="Drest'agath"></a><span>Drest'agath</span>
+                    <li class="nav-item @if($boss == 'council-of-blood') {{ 'active' }} @endif">
+                        <a class="nav-link @if($boss == 'council-of-blood') {{ 'active' }} @endif" href="/council-of-blood"><img src="https://s3.amazonaws.com/noxguild/notes/council-of-blood-icon.jpg" alt="council-of-blood"></a><span>council-of-blood</span>
                     </li>
-                    <li class="nav-item @if($boss == 'vexiona') {{ 'active' }} @endif">
-                        <a class="nav-link @if($boss == 'vexiona') {{ 'active' }} @endif" href="/vexiona"><img src="https://s3.amazonaws.com/noxguild/notes/vexiona-icon.jpg" alt="Vexiona"></a><span>Vexiona</span>
+                    <li class="nav-item @if($boss == 'sludgefist') {{ 'active' }} @endif">
+                        <a class="nav-link @if($boss == 'sludgefist') {{ 'active' }} @endif" href="/sludgefist"><img src="https://s3.amazonaws.com/noxguild/notes/sludgefist-icon.jpg" alt="sludgefist"></a><span>sludgefist</span>
                     </li>
-                    <li class="nav-item @if($boss == 'il-gynoth') {{ 'active' }} @endif">
-                        <a class="nav-link @if($boss == 'il-gynoth') {{ 'active' }} @endif" href="/il-gynoth"><img src="https://s3.amazonaws.com/noxguild/notes/ilgynoth-icon.jpg" alt="Il'gynoth"></a><span>Il'gynoth</span>
+                    <li class="nav-item @if($boss == 'stone-legion-generals') {{ 'active' }} @endif">
+                        <a class="nav-link @if($boss == 'stone-legion-generals') {{ 'active' }} @endif" href="/stone-legion-generals"><img src="https://s3.amazonaws.com/noxguild/notes/stone-legion-generals-icon.jpg" alt="stone-legion-generals"></a><span>stone-legion-generals</span>
                     </li>
-                    <li class="nav-item @if($boss == 'ra-den') {{ 'active' }} @endif">
-                        <a class="nav-link @if($boss == 'ra-den') {{ 'active' }} @endif" href="/ra-den"><img src="https://s3.amazonaws.com/noxguild/notes/raden-icon.jpg" alt="Ra'den"></a><span>Ra'den</span>
-                    </li>
-                    <li class="nav-item @if($boss == 'carapace') {{ 'active' }} @endif">
-                        <a class="nav-link @if($boss == 'carapace') {{ 'active' }} @endif" href="/carapace"><img src="https://s3.amazonaws.com/noxguild/notes/carapace-nzoth-icon.jpg" alt="Carapace of N'zoth"></a><span>Carapace</span>
-                    </li>
-                    <li class="nav-item @if($boss == 'n-zoth') {{ 'active' }} @endif">
-                        <a class="nav-link @if($boss == 'n-zoth') {{ 'active' }} @endif" href="/n-zoth"><img src="https://s3.amazonaws.com/noxguild/notes/nzoth-icon.jpg" alt="N'zoth"></a><span>N'zoth</span>
+                    <li class="nav-item @if($boss == 'sire-denathrius') {{ 'active' }} @endif">
+                        <a class="nav-link @if($boss == 'sire-denathrius') {{ 'active' }} @endif" href="/sire-denathrius"><img src="https://s3.amazonaws.com/noxguild/notes/sire-denathrius-icon.jpg" alt="sire-denathrius"></a><span>sire-denathrius</span>
                     </li>
                 </ul>
             </div>
@@ -103,7 +97,7 @@
 
         <div class="flex-center position-relative bg-secondary text-light text-center notes-footer">
             <div class="container py-5">
-                <p>&copy; 2020 Nox | US Zul'jin | <a target="_blank" href="https://noxguild.us">noxguild.us</a> | Made by: <a target="_blank" href="https://sanoks.tv/">sanoks.tv</a></p>
+                <p>&copy; 2020 Sanoks Dev | Made by: <a target="_blank" href="https://sanoks.tv/">sanoks.tv</a></p>
             </div>
         </div>
     </body>
